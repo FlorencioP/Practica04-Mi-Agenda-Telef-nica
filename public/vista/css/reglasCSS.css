@@ -1,0 +1,229 @@
+tg  {border-collapse:collapse;border-spacing:0;}
+tg, td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;
+    overflow:hidden;word-break:normal;border-color:black;}
+tg, th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;
+    border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+tg, tg-0lax{text-align:left;vertical-align:top}
+               
+table {
+    background-color: white;
+    
+}
+iframe{
+    border: 0px;
+    width: 100%;
+}
+
+video{
+    width: 100%;
+}
+
+body{
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /*Se queda en el centro no se mueve*/
+    background-image: url(../imagenes/fondoweb.gif);
+}
+
+
+header .icon{
+
+    font-weight: bold;
+    color: blue;
+}
+
+header .icon:hover{
+
+    background-color: rgb( 255, 192, 203 , 0.5);
+    border: solid black thin;
+    padding: 0.5%;
+}
+
+
+
+nav ul li{
+    border: solid black thin;
+    background-color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a:visited{
+    color: green;
+}
+
+a:hover{
+    color: crimson;
+}
+
+#mens{
+    font-size: 150%;
+}
+
+nav ul li:hover a {
+    color: pink !important;
+}
+
+nav ul li a:visited {
+    color: blue;
+}
+
+nav ul li:hover{
+    background-color: magenta;
+}
+
+
+
+#intro div{
+    background-color: white;
+    border: solid black thick;
+    border-radius: 20px;
+    font-size: 150%;
+}
+
+#kirbys {
+    background-color: white;
+    border-bottom:  solid black thick;
+    border-top: solid black thick;
+    font-size: 200%;
+
+}
+
+
+#kirbys input{
+    font-size: 150%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#kirbys input:hover{
+    color: pink;
+    background-color: magenta;
+}
+
+#medio #imeg img{
+
+    border: solid black thick;
+    border-radius: 20px;
+   
+}
+
+#medio #text{
+    background-color: white;
+    border: solid black thick;
+    border-radius: 20px;
+    font-size: 105%;
+    text-align: center;
+}
+
+#equipo {
+
+    background-color: slategray;
+    border-bottom:  solid black thick;
+    border-top: solid black thick;
+
+    text-align: center;
+    font-size: 200%;
+}
+
+#equipo .perf p {
+    border: solid black;
+    background-color: white;
+}
+
+#equipo .perf{
+
+    font-weight: bold;
+
+    font-size: 90%;
+}
+
+#final div{
+    background-color: white;
+    border: solid black thick;
+}
+
+#final #c1{
+    background-color: white;
+    border: solid black thick;
+}
+
+#final #c2{
+    background-color: white;
+    border: solid black thick;
+}
+
+
+#bodymail{
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /*Se queda en el centro no se mueve*/
+    background-image: url(../imagenes/fondomail.gif);
+}
+
+#footersecs{
+    background-color: white;
+    border-bottom:  solid black thick;
+    border-top: solid black thick;
+}
+
+#msection {    
+    text-align: center;
+    font-size: 180%;
+    color: white;
+}
+
+#menualt ul {
+
+    background-color: white;
+    border: solid black thick;
+}
+#menualt ol {
+    background-color: white;
+    border: solid black thick;
+}
+
+header nav ul li{
+
+    border: solid black thin;
+    background-color: white;
+    text-overflow: ellipsis;
+
+}
+
+#col1{
+    background-color: white;
+    border: solid black thick;
+}
+
+#colum1{
+    background-color: white;
+    border: solid black thick;
+}
+
+#colum2{
+    background-color: white;
+    border: solid black thick;
+}
+
+#mini{
+    background-color: white;
+    border: solid black thick;
+}
+
+@font-face {
+    font-family: "PIX";
+    src: url("../formatoL/pixx.ttf");
+
+}
+
+* {
+    font-family: "PIX";
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
