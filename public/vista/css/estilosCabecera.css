@@ -1,0 +1,35 @@
+.iconos{
+    color: white;
+    text-align: center;
+}
+
+h1, h2{
+    font-family: 'Abril Fatface', cursive;
+}
+
+h3, p{
+    font-family: 'Abhaya Libre', serif;
+}
+
+blockquote p{
+    font-family: 'Lobster', cursive; 
+}
+
+.iconos:hover{
+    font-family: 'Lobster', cursive;
+}
+
+.nav li a{
+    text-align: center;
+    background-color:#01B1FF;
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+
+.nav li a:hover{
+    background-color: #A6FFFD;
+}
+
+h1, h3, p{
+    color: white;
+}

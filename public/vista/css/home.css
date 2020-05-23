@@ -1,0 +1,95 @@
+body{
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+}
+
+div#intro{
+    float: left;
+    width: 350px;
+    margin-top: 45px;
+    margin-left: 60px;
+    margin-right: 50px;
+}
+
+div#btn{
+    text-align: center;
+    border-radius: 5px;
+}
+
+#video{
+    float: left;
+    margin-bottom: 50px;
+    margin-top: 44px;
+}
+
+.img{
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+div#gal{
+    clear: both;
+    width: 99.75%;
+    height: 280px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+#btn3{
+    clear: both;
+    text-align: center;
+}
+
+div#comentario{
+    clear: both;
+    float: left;
+    margin-left: 60px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 120px;
+}
+
+.txtComen{
+    float: left;
+}
+
+#fotoComentario{
+    text-align: center;
+    float: left;
+    margin-top: 20px;
+}
+
+
+.titulos{
+    clear: both;
+    text-align: center;
+}
+
+.imgPer1{
+    float: left;
+    text-align: center;
+    margin-left: 8px;
+    border-radius: 200px;
+    width: 140px;
+}
+
+.imgPer{
+    float: left;
+    text-align: center;
+    margin-left: 8px;
+    border-radius: 200px;
+    width: 140px;
+}
+
+div#personajes{
+    clear: both;
+    width: 99.75%;
+    height: 300px;
+    border-radius: 20px;
+    /*margin-left: 30px;*/
+    margin-bottom: 150px;
+}

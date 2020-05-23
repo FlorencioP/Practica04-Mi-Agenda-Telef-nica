@@ -1,0 +1,36 @@
+div#header{
+    float: left;
+    width: 100%;
+    height: 170px;
+}
+
+#search{
+    float: right;
+    width: max-content;
+    margin-top: 50px;
+    margin-left: 5px;
+}
+
+.iconos{
+    float: right;
+    width: max-content;
+    text-align: center;
+}
+
+#marginlogo{
+    margin-left: 36px;
+}
+
+ul{
+    list-style: none;
+}
+
+.nav li a{
+    width: 130px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav li{
+    float: left;
+}

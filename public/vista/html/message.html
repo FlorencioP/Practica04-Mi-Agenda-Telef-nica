@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link   rel="stylesheet" type="text/css" href="../css/cabecera.css"/>
+    <link   rel="stylesheet" type="text/css" href="../css/estilosCabecera.css"/>
+    <link   rel="stylesheet" type="text/css" href="../cssMessage/mesage.css"/>
+    <link   rel="stylesheet" type="text/css" href="../cssMessage/estilosMessage.css"/>
+    <link   rel="stylesheet" type="text/css" href="../css/footer.css"/>
+    <link   rel="stylesheet" type="text/css" href="../css/estilosFooter.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div id="header">
+        <header class="logo">
+            <img id="marginlogo" src="../imagenes/GTA_V_logo.png" alt="" width="160" height="160">
+            <a href="about.html">
+                <blockquote class="iconos">
+                    <img src="../imagenes/plus.png" alt="">
+                    <p>About</p>
+                </blockquote>
+            </a>
+            <a href="message.html">
+                <blockquote class="iconos">
+                    <img src="../imagenes/message.png" alt="">
+                    <p>Message</p>
+                </blockquote>
+            </a>
+           <a href="user.html">
+                <blockquote class="iconos">
+                    <img src="../imagenes/user(2).png" alt="">
+                    <p>User</p>
+                </blockquote>
+           </a>
+            <input type="text" id="search" size="90">
+        </header>
+    </div>
+    <nav>
+        <ul class="nav">
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="autos.html" >Autos</a></li>
+            <li><a href="videosDeLaComunidad.html" >Videos</a></li>
+            <li><a href="golpes.html">Golpes</a> </li>
+            <li><a href="negocios.html" >Negocios</a> </li>
+            <li><a href="Noticias.html" id="selec">Noticias</a></li>
+            <li><a href="actividades.html">Actividades</a> </li>
+            <li><a href="eventos.html" >Eventos</a></li>
+        </ul>
+    </nav>
+    <div id="centro">
+        <form >
+            <fieldset>
+                <legend>Login</legend>
+
+                <label id="textUser">User:</label>
+                <div class="inputP">
+                    <input type="text" id="user" size="30">
+                </div>
+                <br>
+                <br>
+                <label id="textMessage">Message:</label>
+                <div class="inputP">
+                    <textarea id="mesage" name="comentario" rows="10" cols="31"></textarea> 
+                </div>
+                <br>
+               <div id="btnlog">
+                   <br>
+                    <input class="btnLog" type="submit" value="Send">
+               </div>
+            </fieldset>
+        </form>
+    </div>
+    <footer id="pieP">
+        <hr>
+        <img src="../imagenes/etiqueta.png" alt="" id="etiqueta">
+        <div id="contactos">
+            <span>Call: <a href="tel:0990791348">+593 0990791348</a></span>
+            <br>
+            <span>Email: <a href="mailto:cpenaf@est.ups.edu.ec">cpenaf@est.ups.edu.ec</a></span>
+            <br>
+            <span>© Todos los derechos recervados</span>
+        </div>
+        <div id="redesSoc">
+            <blockquote id="facebook">
+                <img src="../imagenes/facebook.png" alt="" width="40">
+                <span> <a href="https://www.facebook.com/rockstargames/" target="blank">Facebook</a></span>
+            </blockquote>
+            <blockquote id="twiter">
+                <img src="../imagenes/twiter.png" alt="" width="40"> 
+                <span><a href="https://trendtwitter.com/RockstarGames/" target="blank">twiter</a></span>
+            </blockquote>
+        </div>
+    </footer>
+</body>
+</html>
