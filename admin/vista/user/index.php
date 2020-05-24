@@ -1,9 +1,3 @@
-<?php
- session_start();
- if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
- header("Location: /SistemaDeGestion/public/vista/login.html");
- }
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,25 +17,19 @@
         </tr>
         <?php
             include '../../../config/conexionBD.php';
-            $sql = "SELECT * FROM usuarios";
+            $id=$_GET['id'];
+            $sql = "SELECT * FROM telefonos WHERE USUARIOS_usu_id=$id";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     echo "<tr>";
-                    echo " <td>" . $row["usu_cedula"] . "</td>";
-                    echo " <td>" . $row['usu_nombres'] ."</td>";
-                    echo " <td>" . $row['usu_apellidos'] . "</td>";
-                    echo " <td>" . $row['usu_direccion'] . "</td>";
-                    echo " <td>" . $row['usu_telefono'] . "</td>";
-                    echo " <td>" . $row['usu_correo'] . "</td>";
-                    echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>";
-                    echo " <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
-                    echo " <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-                    echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar
-                   contraseña</a> </td>";
+                    echo " <td>" . $row['usu_numero'] . "</td>";
+                    echo " <td>" . $row['usu_tipo'] . "</td>";
+                    echo " <td>" . $row['usu_operadora'] . "</td>";
+                    echo " <td> <a href='eliminar.php?codigo=" . $row['tel_id'] . "'>Eliminar</a> </td>";
+                    echo " <td> <a href='modificar.php?codigo=" . $row['tel_id'] . "'>Modificar</a> </td>";
                     echo "</tr>";
                 }
-                
             } 
             else {
                 echo "<tr>";

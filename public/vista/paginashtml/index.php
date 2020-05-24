@@ -50,7 +50,7 @@
             <blockquote class="icon" id="perf">
                 <img  src="../imagenes/user.png" alt="Perfil">
                 <!--<p>Perfil</p> -->
-                <p id = "nombre"> <?php echo $nombreP?> </p>
+                <a href="" id = "nombre"> <?php echo $nombreP?> </a>
                
 
                
@@ -73,8 +73,6 @@
 
             <blockquote class="icon" id="guia">
                 <img src="../imagenes/about.png" alt="Guia TElefonica">
-
-
                 <a href="" id='guiatef' ></a>
                 
                 
@@ -86,15 +84,8 @@
             
     <?php 
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ 
-
-
-
-
             echo "<script src='../scripts/indexopclog.js?id=$id' ></script>";
             //header("Location: /SistemaDeGestion/public/vista/login.html"); 
-            
-           
-
         } else{ 
 
             echo "<script src='../scripts/indexopc.js'></script>";
