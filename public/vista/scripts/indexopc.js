@@ -1,6 +1,8 @@
 
 document.getElementById("nombre").innerHTML='Perfil'
 
+
+
 document.getElementById("opcion1").innerHTML='Iniciar Secion '
 document.getElementById("opcion1").setAttribute("href" ,"login.html" )
 

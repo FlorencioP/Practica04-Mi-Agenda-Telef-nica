@@ -35,12 +35,19 @@
                         $id = $_GET['id'];
 
                         $sqln = "SELECT usu_nombres FROM usuarios WHERE usu_id = '$id'";
-
-                        
                             $resultn = $conn->query($sqln);
                             while ($row = $resultn -> fetch_assoc()){
                                 $nombreP = $row['usu_nombres']; 
                             } 
+
+                        $sqlr = "SELECT usu_rol FROM usuarios WHERE usu_id = '$id'";
+
+                            $resultr = $conn->query($sqlr);
+                            while ($row = $resultr -> fetch_assoc()){
+                                $rolusu = $row['usu_rol']; 
+                            } 
+                            echo "<p> $rolusu </p>";
+                            
                         
                     }
                 ?>
@@ -49,11 +56,15 @@
 
             <blockquote class="icon" id="perf">
                 <img  src="../imagenes/user.png" alt="Perfil">
-                <br> <br>
-                <!--<p>Perfil</p> -->
-                <a href="" id = "nombre"> <?php echo $nombreP?> </a> <br><br>
-               
+                <!--<br> <br>
+                <p>Perfil</p> 
+                <a href=""  id = "nombre"> <?php echo $nombreP?> </a> <br><br>-->
+                    
 
+                <a href="" onclick="usuarios('<?php echo $rolusu ?>')" id = "nombre" >   <?php echo $nombreP?>  </a>
+
+
+                 <!--onclick="usuarios(<?php $rolusu ?>)"-->
                
 
                 <a href="" id='opcion1' >  </a>  <br> 
@@ -89,6 +100,7 @@
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ 
 
             echo "<script src='../scripts/indexopclog.js?id=$id' ></script>";
+            
             //header("Location: /SistemaDeGestion/public/vista/login.html"); 
             
         } else{ 
