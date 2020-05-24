@@ -17,8 +17,10 @@
 <?php 
         session_start(); 
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ 
-            header("Location: /SistemaDeGestion/public/vista/paginashtml/login.html"); 
-        } 
+           
+        }else{
+            header("Location: login.html"); 
+        }
     ?>
 
 

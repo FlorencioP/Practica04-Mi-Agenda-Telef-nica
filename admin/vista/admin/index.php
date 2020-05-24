@@ -30,7 +30,6 @@
         $sql = "SELECT * FROM usuarios"; 
         $result = $conn->query($sql); 
         if ($result->num_rows > 0) { 
-            echo "<p>EsteS SON USERS </p>";
             while($row = $result->fetch_assoc()) { 
                 echo "<tr>"; 
                 echo " <td>" . $row["usu_cedula"] . "</td>"; 
