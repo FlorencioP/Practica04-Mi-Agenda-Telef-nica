@@ -23,10 +23,10 @@
             $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
             $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null;
             $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
-            $sql = "INSERT INTO USUARIOS VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion',
+            /*$sql = "INSERT INTO USUARIOS VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion',
             '$correo', MD5('$contrasena'), '$fechaNacimiento', 'N', null, null,'U')";
             $idTel = "SELECT  top 1 * from USUARIOS order by usu_id desc;"
-            $sqlTel = "INSERT INTO USUARIOS VALUES (0, '$telefono', '$tipo', '$operadora', 'N',
+             $sqlTel = "INSERT INTO USUARIOS VALUES (0, '$telefono', '$tipo', '$operadora', 'N',
             NULL,NULL,'$idTel')";
              
             if ($conn->query($sql) === TRUE) {
@@ -50,7 +50,7 @@
             }
             //cerrar la base de datos
             $conn->close();
-            echo "<a href='../vista/crear_usuario.html'>Regresar</a>";
+            echo "<a href='../vista/crear_usuario.html'>Regresar</a>";*/
         ?>
     </body>
  </html>
