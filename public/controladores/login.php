@@ -10,8 +10,12 @@
     
     if ($result->num_rows > 0) { 
         $_SESSION['isLogged'] = TRUE; 
-        header("Location: ../../admin/vista/usuario/index.php"); 
+
+        //header("Location: ../../admin/vista/usuario/index.php"); 
+        header("Location: ../vista/paginashtml/index.php"); 
+
     } else { 
+
         header("Location: ../vista/paginashtml/login.html"); 
     } 
     
