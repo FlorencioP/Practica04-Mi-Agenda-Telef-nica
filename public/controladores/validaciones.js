@@ -20,7 +20,6 @@ function validarForm(){
 
 function validarDireccion(){
     var dir=document.getElementById("Direccion").value;
-    console.log("sadasd");
     if(dir==""){
         document.getElementById("msjDireccion").innerHTML="Tiene que ingresar una direccion";
         document.getElementById("msjDireccion").style.color="red";
@@ -194,9 +193,9 @@ function validarTlf(){
 function validarLongTel(){
     var telf=document.getElementById("Telefono").value;
     var telfLong=telf.length;
-    if(telfLong < 10){
+    if(telfLong < 7){
         document.getElementById("Telefono").style.borderColor="red";
-        document.getElementById("msjTelefono").innerHTML="el numero debe contener 10 digitos"
+        document.getElementById("msjTelefono").innerHTML="el numero debe contener 7 digitos minimo"
         document.getElementById("msjTelefono").style.color="red";
         t=0;
     }

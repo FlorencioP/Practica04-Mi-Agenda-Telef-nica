@@ -20,7 +20,6 @@
 
 
     <header>
-
         <a href="index.html"><img id="logo" src="../imagenes/logof.png"  alt="Se escribe con F" /></a>
         <p id="busca"> <input type="text" placeholder="Disque Busqueda" id="busqueda">   </p>
         
@@ -62,7 +61,6 @@
         
         <nav>
             <ul>
-                
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="imagenes.html">Imagenes</a></li>
                 <li><a href="video.html">Video</a></li>
@@ -72,7 +70,6 @@
                 <li><a href="perritomax.html">El Maxwell</a></li>
                 <li><a href="cosasvarias2.html">Vario</a></li>
                 <li><a href="cosasvarias3.html">Vario 2</a></li>
-            
             </ul>
         </nav>
 
