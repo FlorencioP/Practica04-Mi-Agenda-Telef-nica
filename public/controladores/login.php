@@ -12,6 +12,5 @@ MD5('$contrasena')";
  } else {
  header("Location: ../vista/login.html");
  }
-
  $conn->close();
 ?>

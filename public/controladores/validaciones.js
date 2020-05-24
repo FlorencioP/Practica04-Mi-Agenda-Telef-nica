@@ -194,9 +194,9 @@ function validarTlf(){
 function validarLongTel(){
     var telf=document.getElementById("Telefono").value;
     var telfLong=telf.length;
-    if(telfLong < 10){
+    if(telfLong < 7){
         document.getElementById("Telefono").style.borderColor="red";
-        document.getElementById("msjTelefono").innerHTML="el numero debe contener 10 digitos"
+        document.getElementById("msjTelefono").innerHTML="el numero debe contener 7 digitos minimo"
         document.getElementById("msjTelefono").style.color="red";
         t=0;
     }
