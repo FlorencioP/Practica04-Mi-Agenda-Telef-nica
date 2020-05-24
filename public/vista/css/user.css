@@ -1,0 +1,43 @@
+body{
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+
+#centro{
+    float: left;
+    width: 500px;
+    height: max-content;
+    margin-top: 60px;
+    margin-left: 400px;
+    margin-bottom: 50px;
+    border-radius: 10%;
+}
+
+div#texto{
+    float: left;
+    margin-left: 25%;
+    width: 200px;
+    height: max-content;
+}
+
+#text{
+    clear: both;
+    float: left;
+    margin-right: 6%;
+}
+
+div.inputP{
+    float: left;
+    margin-top: 15px;
+}
+
+div#btnlog{
+    clear: both;
+    float: left;
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+

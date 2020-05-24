@@ -2,51 +2,95 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link   rel="stylesheet" type="text/css" href="../css/user.css"/>
+    <link   rel="stylesheet" type="text/css" href="../css/estilosUser.css"/>
+    <script type="text/javascript" src="../../controladores/validaciones.js"></script>
 </head>
     <body>
+        <div id="centro">
         <form id="formulario01" method="POST" action="../../controladores/crear_usuario.php">
-        <label for="cedula">Cedula (*)</label>
-        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."
-        required/>
-        <br>
-        <label for="nombres">Nombres (*)</label>
-        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres
-        ..." required/>
-        <br>
-        <label for="apellidos">Apelidos (*)</label>
-        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos
-        ..." required/>
-        <br>
-        <label for="direccion">Dirección (*)</label>
-        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..."
-        required/>
-        <br>
-        <label for="telefono">Teléfono (*)</label>
-        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico
-        ..." required/>
-        <br>
-        <label for="tipo">Tipo (*)</label>
-        <input type="text" id="tipo" name="tipo" value="" placeholder="Ingrese su número telefónico
-        ..." required/>
-        <br>
-        <label for="operadora">Operadora (*)</label>
-        <input type="text" id="operadora" name="operadora" value="" placeholder="Ingrese su número telefónico
-        ..." required/>
-        <br>
-        <label for="fecha">Fecha Nacimiento (*)</label>
-        <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su
-        fecha de nacimiento ..." required/>
-        <br>
-        <label for="correo">Correo electrónico (*)</label>
-        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico
-        ..." required/>
-        <br>
-        <label for="correo">Contraseña (*)</label>
-        <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su
-        contraseña ..." required/>
-        <br>
-        <input type="submit" id="crear" name="crear" value="Aceptar"/>
-        <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
-        </form> 
+        <div id="texto">
+                <div class="inputP">
+                    <label id="text">Cedula:</label>
+                    <br>
+                    <input type="text" id="Cedula" size="30" name="cedula" onkeyup="validarTamano()" onblur="validarCedula()">
+                    <br>
+                    <span id="msjCedula" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Nombres:</label>
+                    <input type="text" id="Nombre" size="30" name="nombres" onblur="validarNombres()" onkeyup="valLeNom()">
+                    <br>
+                    <span id="msjNombres" class="error"></span>
+                </div>
+            
+                <div class="inputP">
+                    <label id="text">Apellido:</label>
+                    <input type="text" id="Apellido" size="30" name="apellidos" onblur="validarApellidos()" onkeyup="valApeLe()">
+                    <br>
+                    <span id="msjApellido" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Direccion:</label>
+                    <input type="text" id="Direccion" name="direccion" size="30" onblur="validarDireccion()">
+                    <br>
+                    <span id="msjDireccion" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Telefono:</label>
+                    <input type="text" id="Telefono" name="telefono" size="30" onkeyup="validarTlf()" onblur="validarLongTel()">
+                    <br>
+                    <span id="msjTelefono" class="error"></span>
+                </div>
+
+                <div class="inputP">
+                    <label id="text">Tipo:</label>
+                    <input type="text" id="tipo" name="tipo" size="30" onkeyup="validarTipo()" onblur="validarLongTel()">
+                    <br>
+                    <span id="msjTipo" class="error"></span>
+                </div>
+
+                <div class="inputP">
+                    <label id="text">Operadora:</label>
+                    <input type="text" id="operadora" name="operadora" size="30" onkeyup="validarOperadora()" onblur="validarLongTel()">
+                    <br>
+                    <span id="msjOperadora" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Fecha de nacimiento:</label>
+                    <input type="date" id="Fecha" name="fechaNacimiento" value=""  onkeyup="validarFecha()" placeholder="Ingrese su
+                    fecha de nacimiento ..." required/>
+                    <br>
+                    <span id="msjFecha" class="error"></span>
+                </div>
+                
+                <div class="inputP">
+                    <label id="text">Correo:</label>
+                    <input type="text" id="Correo" size="30" name="correo" onblur="validarCorreo()">
+                    <br>
+                    <span id="msjCorreo" class="error"></span>
+                </div>
+            
+                <div class="inputP">
+                    <label id="text">Password:</label>
+                    <input type="password" id="password" name="contrasena" size="30" onblur="validarPassword()">
+                    <br>
+                    <span id="msjPassword" class="error"></span>
+                </div>
+                <div id="btnlog">
+                    <input class="btnLog" type="submit" value="Registrarse" name="crear" onclick="validarPassword();
+                    validarCorreo();validarFecha();validarTlf();validarDireccion();validarApellidos();
+                    validarNombres();validarTamano();validarTipo();validarOperadora()">
+                    <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+                </div>
+            </div>
+            <br>
+            <!--<input type="submit" id="crear" name="crear" value="Aceptar"/>-->
+            </form> 
+        </div>
     </body>
 </html>
