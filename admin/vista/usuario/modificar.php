@@ -10,7 +10,7 @@
 
     <?php 
         session_start(); 
-        if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){ 
+        if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
             header("Location: /SistemaDeGestion/public/vista/login.html"); 
         } 
     ?>

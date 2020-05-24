@@ -23,7 +23,7 @@
 
 
     <header>
-        <a href="index.html"><img id="logo" src="../imagenes/logof.png"  alt="Se escribe con F" /></a>
+        <a href="index.php"><img id="logo" src="../imagenes/logof.png"  alt="Se escribe con F" /></a>
         <p id="busca"> <input type="text" placeholder="Disque Busqueda" id="busqueda">   </p>
         
         <?php
@@ -49,8 +49,9 @@
 
             <blockquote class="icon" id="perf">
                 <img  src="../imagenes/user.png" alt="Perfil">
+                <br> <br>
                 <!--<p>Perfil</p> -->
-                <p id = "nombre"> <?php echo $nombreP?> </p>
+                <a href="" id = "nombre"> <?php echo $nombreP?> </a> <br><br>
                
 
                
@@ -87,14 +88,9 @@
     <?php 
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ 
 
-
-
-
             echo "<script src='../scripts/indexopclog.js?id=$id' ></script>";
             //header("Location: /SistemaDeGestion/public/vista/login.html"); 
             
-           
-
         } else{ 
 
             echo "<script src='../scripts/indexopc.js'></script>";
@@ -256,7 +252,7 @@
         <a class="soci" href="https://www.instagram.com/florencio.peralta.1/?hl=es-la"><img  src="../imagenes/insta.png"  alt="Instagram" /></a> <br>
 
 
-        <a href="index.html"><img src="../imagenes/logof.png"  alt="Se escribe con F" /></a> <br>
+        <a href="index.php"><img src="../imagenes/logof.png"  alt="Se escribe con F" /></a> <br>
         Carlos Florencio Peralta Bautista &#8225; <br> Universidad Politécnica Salesiana &#8225; <br>
         <a href="mailto:cperaltab1@est.ups.edu.ec">cperaltab1@est.ups.edu.ec</a>  &#8225; <br> <a href="tel:+5930998027181">
         (593) 099-802-7181</a>  &#8225; <br> &#169; Todos los derechos reservados. 

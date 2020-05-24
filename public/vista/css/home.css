@@ -20,6 +20,7 @@ header #busca{
 nav ul {
     clear: both;
     margin:20px;
+    margin-top: 10%;
     
 }
 nav ul li{
@@ -29,7 +30,7 @@ nav ul li{
     float: left;
     padding:0 10px;
     width: 9%;
-    margin-top: 1%;
+    margin-top: 5%;
 }
 
 
