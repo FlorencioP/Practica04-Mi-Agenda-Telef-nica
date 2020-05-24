@@ -36,7 +36,7 @@
                     echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
                 }
                 else{
-                    header('Location: ../vista/paginashtml/index.html');
+                    header('Location: ../vista/paginashtml/index.php');
                 } 
             } 
             else {
