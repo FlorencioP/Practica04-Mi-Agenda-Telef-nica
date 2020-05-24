@@ -1,5 +1,9 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
+
+
 
 
 <head>
@@ -15,7 +19,6 @@
 
 <body>
 
-  
 
 
 
@@ -24,18 +27,40 @@
         <a href="index.html"><img id="logo" src="../imagenes/logof.png"  alt="Se escribe con F" /></a>
         <p id="busca"> <input type="text" placeholder="Disque Busqueda" id="busqueda">   </p>
         
+        <?php
+                    session_start(); 
+                    include '../../../config/conexionBD.php'; 
 
+                    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+                        
+                        $id = $_GET['id'];
+
+                        $sqln = "SELECT usu_nombres FROM usuarios WHERE usu_id = '$id'";
+
+                        
+                            $resultn = $conn->query($sqln);
+                            while ($row = $resultn -> fetch_assoc()){
+                                $nombreP = $row['usu_nombres']; 
+                            } 
+                        
+                    }
+                ?>
+        
         
 
             <blockquote class="icon" id="perf">
                 <img  src="../imagenes/user.png" alt="Perfil">
-                <p>Perfil</p>
-        
+                <!--<p>Perfil</p> -->
+                <p id = "nombre"> <?php echo $nombreP?> </p>
+               
 
-                <a href="" id='opcion1' >fdsfsdf</a>  <br> 
+               
 
-                <a href="" id='opcion2' ></a>
+                <a href="" id='opcion1' >  </a>  <br> 
 
+                <a href="" id='opcion2' > </a>
+
+                <a href=""></a>
 
 
             </blockquote>
@@ -59,7 +84,29 @@
             </blockquote>
 
 
+            
+    <?php 
+        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ 
+
+
+
+
+            echo "<script src='../scripts/indexopclog.js?id=$id' ></script>";
+            //header("Location: /SistemaDeGestion/public/vista/login.html"); 
+            
+           
+
+        } else{ 
+
+            echo "<script src='../scripts/indexopc.js'></script>";
+            
+        }
+    ?>
         
+        <!--<p>  = dasoidhaoisupd</p> -->
+
+
+
         <nav>
             <ul>
                 
@@ -217,16 +264,9 @@
         <a href="mailto:cperaltab1@est.ups.edu.ec">cperaltab1@est.ups.edu.ec</a>  &#8225; <br> <a href="tel:+5930998027181">
         (593) 099-802-7181</a>  &#8225; <br> &#169; Todos los derechos reservados. 
     </footer> 
+
+
     
-    <?php 
-        session_start(); 
-        if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){ 
-
-            //header("Location: /SistemaDeGestion/public/vista/login.html"); 
-            echo "<script src='../scripts/indexopc.js'></script>";
-
-        } 
-    ?>
 
 
 
