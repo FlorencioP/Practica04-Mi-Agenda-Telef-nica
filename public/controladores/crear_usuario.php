@@ -11,7 +11,6 @@
 </head>
     <body>
         <?php
-            //incluir conexión a la base de datos
             include '../../config/conexionBD.php';
             $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
             $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;
@@ -25,21 +24,17 @@
             $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
             $sql = "INSERT INTO USUARIOS VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion',
             '$correo', MD5('$contrasena'), '$fechaNacimiento', 'N', null, null,'U')";
-            $idTel = "SELECT  top 1 * from USUARIOS order by usu_id desc;"
-            $sqlTel = "INSERT INTO USUARIOS VALUES (0, '$telefono', '$tipo', '$operadora', 'N',
-            NULL,NULL,'$idTel')";
-             
             if ($conn->query($sql) === TRUE) {
-                if ($conn->query($sqlTel) === TRUE) {
-                    echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
-                } 
-                else {
-                    if($conn->errno == 1062){
-                        echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistemaaaaa </p>";
-                    }else{
-                        echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
-                    }
+                $idTel = "SELECT MAX(usu_id) AS usu_id FROM USUARIOS";
+                $result = $conn->query($idTel);
+                while($row=$result->fetch_assoc()){
+                    $id=$row['usu_id'];
                 }
+                $sqlTel = "INSERT INTO telefonos VALUES (0, '$telefono', '$tipo', '$operadora', 'N',
+                NULL,NULL,$id)";
+                if ($conn->query($sqlTel) != TRUE) {
+                    echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
+                } 
             } 
             else {
                 if($conn->errno == 1062){
@@ -48,7 +43,6 @@
                     echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
                 }
             }
-            //cerrar la base de datos
             $conn->close();
             echo "<a href='../vista/crear_usuario.html'>Regresar</a>";
         ?>
