@@ -7,8 +7,10 @@ var t=0;
 var f=0;
 var co=0;
 var p=0;
+var tip=0;
+var op=0;
 function validarForm(){
-    if(c != 0 && n!=0 && a!=0 && d!=0 && t!=0 && f!=0 && co!=0 && p!=0){
+    if(c != 0 && n!=0 && a!=0 && d!=0 && t!=0 && f!=0 && co!=0 && p!=0 && tip!=0 && op!=0){
         return bandera=true;
     }
     else{
@@ -39,12 +41,12 @@ function validarTipo(){
         document.getElementById("msjTipo").innerHTML="Tiene que ingresar un tipo de numero de telefono";
         document.getElementById("msjTipo").style.color="red";
         document.getElementById("tipo").style.borderColor="red";
-        d=0;
+        tip=0;
     }
     else{
         document.getElementById("msjTipo").innerHTML="";
         document.getElementById("tipo").style.borderColor="black";
-        d=1;
+        tip=1;
     }   
 }
 
@@ -55,12 +57,12 @@ function validarOperadora(){
         document.getElementById("msjOperadora").innerHTML="Tiene que ingresar una operadora";
         document.getElementById("msjOperadora").style.color="red";
         document.getElementById("operadora").style.borderColor="red";
-        d=0;
+        op=0;
     }
     else{
         document.getElementById("msjOperadora").innerHTML="";
         document.getElementById("operadora").style.borderColor="black";
-        d=1;
+        op=1;
     }   
 }
 
