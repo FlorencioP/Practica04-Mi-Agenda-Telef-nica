@@ -1,9 +1,4 @@
 
-
-header {
-    width: 100%;
-}
-
 header #logo {
     float: left;
     width: 20%;
@@ -22,9 +17,12 @@ header #busca{
     margin-top: 4%; 
 }
 
+
 nav ul {
+    
+    
     clear: both;
-    margin:20px;
+    margin:1%;
     
 }
 nav ul li{
@@ -32,10 +30,13 @@ nav ul li{
     
     display:block;
     float: left;
-    padding:0 10px;
+    padding:0 1%;
     width: 9%;
-    margin-top: 1%;
+    margin-top: 4%;
+    
 }
+
+
 
 #intro {
     padding-top: 4%;
@@ -128,6 +129,9 @@ section + img {
     
 }
 
+
+
+
 header .icon img {
 
     margin-top: 50%;
@@ -135,12 +139,29 @@ header .icon img {
 
 }
 header .icon{
-
-    float: left;
-    width: 3%;
-    margin-right: 2%;
-
+    margin: 1.1%;
+    padding: 1%;
+    width: 4%;
 }
+
+ #perf{
+    position: absolute;
+    top: 0%;
+	left: 73%;
+}
+ #msg{
+    position: absolute;
+    top: 0%;
+	left: 82%;
+}
+#guia{
+
+    position: absolute;
+    top: 0%;
+	left: 90%;
+}
+
+
 
 #final{
     clear: both;

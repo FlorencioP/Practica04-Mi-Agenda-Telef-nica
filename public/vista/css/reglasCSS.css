@@ -28,17 +28,44 @@ body{
 
 
 header .icon{
-
+    text-align: center !important;
     font-weight: bold;
     color: blue;
 }
 
-header .icon:hover{
 
+#guiatef{
+    
+    color: yellow !important;
+}
+
+
+
+#opcion1{
+    display: none ;
+}
+
+header .icon:hover #opcion1{
+    display: block;
+}
+
+#opcion2{
+    display: none ;
+}
+
+header .icon:hover #opcion2{
+    display: block;
+}
+
+
+
+header .icon:hover{
+    
     background-color: rgb( 255, 192, 203 , 0.5);
     border: solid black thin;
-    padding: 0.5%;
+
 }
+
 
 
 

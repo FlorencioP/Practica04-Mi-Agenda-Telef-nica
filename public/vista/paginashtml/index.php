@@ -15,28 +15,51 @@
 
 <body>
 
+  
+
+
+
     <header>
 
         <a href="index.html"><img id="logo" src="../imagenes/logof.png"  alt="Se escribe con F" /></a>
         <p id="busca"> <input type="text" placeholder="Disque Busqueda" id="busqueda">   </p>
         
-        <blockquote class="icon">
-            <a href="login.html"  ><img  src="../imagenes/user.png" alt="Perfil"> </a>
-            <p>Perfil</p>
-        </blockquote>
 
-        <blockquote class="icon">
-            <img  src="../imagenes/mensaje.png" alt="Mensaje">
-            <p>Mensaje</p>
         
+
+            <blockquote class="icon" id="perf">
+                <img  src="../imagenes/user.png" alt="Perfil">
+                <p>Perfil</p>
         
-        </blockquote>
-        <blockquote class="icon">
-            <img src="../imagenes/about.png" alt="About">
-            <p>Acerca</p>
-        </blockquote>
+
+                <a href="" id='opcion1' >fdsfsdf</a>  <br> 
+
+                <a href="" id='opcion2' ></a>
 
 
+
+            </blockquote>
+            
+            <blockquote class="icon" id="msg">
+                <img  src="../imagenes/mensaje.png" alt="Mensaje">
+                <p>Enviar Mensaje</p>
+            
+            
+            </blockquote>
+
+            <blockquote class="icon" id="guia">
+                <img src="../imagenes/about.png" alt="Guia TElefonica">
+
+
+                <a href="" id='guiatef' ></a>
+                
+                
+
+
+            </blockquote>
+
+
+        
         <nav>
             <ul>
                 
@@ -195,6 +218,16 @@
         (593) 099-802-7181</a>  &#8225; <br> &#169; Todos los derechos reservados. 
     </footer> 
     
+    <?php 
+        session_start(); 
+        if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){ 
+
+            //header("Location: /SistemaDeGestion/public/vista/login.html"); 
+            echo "<script src='../scripts/indexopc.js'></script>";
+
+        } 
+    ?>
+
 
 
     
