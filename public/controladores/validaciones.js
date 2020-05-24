@@ -20,7 +20,6 @@ function validarForm(){
 
 function validarDireccion(){
     var dir=document.getElementById("Direccion").value;
-    console.log("sadasd");
     if(dir==""){
         document.getElementById("msjDireccion").innerHTML="Tiene que ingresar una direccion";
         document.getElementById("msjDireccion").style.color="red";
