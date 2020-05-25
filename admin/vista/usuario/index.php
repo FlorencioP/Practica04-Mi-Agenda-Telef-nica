@@ -19,7 +19,6 @@
 
 <body> 
     <?php 
-    //Charly
         include '../../../config/conexionBD.php'; 
         $id=$_GET['id'];
         $sql = "SELECT * FROM usuarios where usu_id=$id"; 
@@ -28,7 +27,7 @@
             while($row = $result->fetch_assoc()) {
     ?> 
         <div id="centro"> 
-        <form id="formulario01" method="POST" onsubmit="return validarForm2(<?php echo $id ?>)">
+        <form id="formulario01" method="POST" action="../../controladores/user/modificar.php?id=<?php echo $id ?>" onsubmit="return validarForm2()">
         <div id="texto">
                 <div class="inputP">
                     <label id="text">Cedula:</label>
