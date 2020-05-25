@@ -53,7 +53,7 @@ function buscarPorMail() {
             } 
         }; 
         
-        xmlhttp.open("GET","../../controladores/admin/peticioNums.php?mail="+mail,true); 
+        xmlhttp.open("GET","../../controladores/admin/peticioNumsMail.php?mail="+mail,true); 
         xmlhttp.send(); 
     } 
     return false;
