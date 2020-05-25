@@ -10,7 +10,6 @@ body{
     height: max-content;
     margin-top: 60px;
     margin-left: 400px;
-    margin-bottom: 50px;
     border-radius: 10%;
 }
 
@@ -38,6 +37,37 @@ div#btnlog{
     width: 200px;
     margin-top: 30px;
     margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+div#botones{
+    float: left;
+    width: 10%;
+    height: max-content;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+#boton{
+    margin-top: 15%;
+}
+
+div#btnAdd{
+    clear: both;
+    float: right;
+    width: 10%;
+    height: max-content;
+    margin-right: 2%;
+}
+
+div#tabla{
+    clear: both;
+    float: left;
+    width: 97%;
+    height: max-content;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
     margin-bottom: 15px;
 }
 

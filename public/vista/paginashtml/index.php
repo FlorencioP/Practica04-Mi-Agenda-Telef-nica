@@ -18,10 +18,7 @@
 </head>
 
 <body>
-
-
-
-
+    
     <header>
         <a href="index.php"><img id="logo" src="../imagenes/logof.png"  alt="Se escribe con F" /></a>
         <p id="busca"> <input type="text" placeholder="Disque Busqueda" id="busqueda">   </p>
@@ -61,7 +58,7 @@
                 <a href=""  id = "nombre"> <?php echo $nombreP?> </a> <br><br>-->
                     
 
-                <a href="" onclick="usuarios('<?php echo $rolusu ?>')" id = "nombre" >   <?php echo $nombreP?>  </a>
+                <a href="" onclick="usuarios('<?php echo $rolusu ?>','<?php echo $id ?>')" id = "nombre" >   <?php echo $nombreP?>  </a>
 
 
                  <!--onclick="usuarios(<?php $rolusu ?>)"-->

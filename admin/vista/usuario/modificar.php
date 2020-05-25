@@ -16,8 +16,8 @@
     ?>
 
     <?php 
-        $codigo = $_GET["codigo"]; 
-        $sql = "SELECT * FROM usuario where usu_codigo=$codigo"; 
+        $codigo = $_GET["id"]; 
+        $sql = "SELECT * FROM usuarios where usu_codigo=$codigo"; 
         
         include '../../../config/conexionBD.php'; 
         

@@ -1,5 +1,6 @@
 body{
-    background-color: rgb(187, 65, 65);
+    /*background-color: rgb(187, 65, 65);*/
+    background-image: url(../imagenes/kirbyFon.png);
     /*background-color: black;*/
     color: black;
 }

@@ -7,9 +7,6 @@
     $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null; 
     $sql = "SELECT * FROM usuarios WHERE usu_correo = '$usuario' and usu_contrasena = MD5('$contrasena')"; 
 
-
-
-
     $result = $conn->query($sql); 
     
     if ($result->num_rows > 0) { 
