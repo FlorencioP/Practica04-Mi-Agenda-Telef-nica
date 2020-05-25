@@ -18,16 +18,6 @@
         header("Location: /SistemaDeGestion/public/vista/login.html"); 
     } 
 ?>
-
-    <!--<table style="width:100%">-->
-        <!--<tr> 
-            <th>Cedula</th> 
-            <th>Nombres</th> 
-            <th>Apellidos</th> 
-            <th>Dirección</th> 
-            <th>Correo</th> 
-            <th>Fecha Nacimiento</th> 
-        </tr>-->
     <?php 
         include '../../../config/conexionBD.php'; 
         $id=$_GET['id'];
@@ -84,7 +74,7 @@
                 </div>
 
                 <div id="btnlog">
-                    <input style="display: none;" class="btnLog" type="submit" value="Aceptar" name="aceptar" onclick="validarPassword();
+                    <input style="display: none;" class="btnLog" type="submit" value="Aceptar" name="aceptar" id="aceptar" onclick="validarPassword();
                     validarCorreo();validarFecha();validarTlf();validarDireccion();validarApellidos();
                     validarNombres();validarTamano();validarTipo();validarOperadora()">
                     <input style="display: none;" type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
@@ -93,9 +83,9 @@
             </form> 
         </div> 
         <div id="botones">
-            <button id="boton" name="modificar" onclick="modificar();">Modificar perfil</button>
-            <button id="boton" name="cambContra">Cambiar contraseña</button>
-            <button id="boton" name="eliminar">Eliminar perfil</button>
+            <button class="boton" id="modificar" onclick="modificar();">Modificar perfil</button>
+            <button class="boton" id="cambContra">Cambiar contraseña</button>
+            <button class="boton" id="eliminar">Eliminar perfil</button>
         </div>
         <div id="btnAdd">
             <button id="boton">Agregar Telefono</button>
