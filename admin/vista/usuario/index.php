@@ -1,3 +1,10 @@
+<?php 
+    session_start(); 
+    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
+        header("Location: /SistemaDeGestion/public/vista/login.html"); 
+    } 
+?>
+
 <!DOCTYPE html> 
 <html> 
 
@@ -11,13 +18,6 @@
 </head> 
 
 <body> 
-    
-<?php 
-    session_start(); 
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
-        header("Location: /SistemaDeGestion/public/vista/login.html"); 
-    } 
-?>
     <?php 
         include '../../../config/conexionBD.php'; 
         $id=$_GET['id'];
@@ -27,7 +27,7 @@
             while($row = $result->fetch_assoc()) {
     ?> 
         <div id="centro"> 
-        <form id="formulario01" method="POST" action="../../controladores/crear_usuario.php" onsubmit="return validarForm()">
+        <form id="formulario01" method="POST" onsubmit="return validarForm2(<?php echo $id ?>)">
         <div id="texto">
                 <div class="inputP">
                     <label id="text">Cedula:</label>
@@ -74,10 +74,9 @@
                 </div>
 
                 <div id="btnlog">
-                    <input style="display: none;" class="btnLog" type="submit" value="Aceptar" name="aceptar" id="aceptar" onclick="validarPassword();
-                    validarCorreo();validarFecha();validarTlf();validarDireccion();validarApellidos();
-                    validarNombres();validarTamano();validarTipo();validarOperadora()">
-                    <input style="display: none;" type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
+                    <input style="display: none;" class="btnLog" type="submit" value="Aceptar" name="aceptar" id="aceptar" onclick="validarCorreo();validarFecha();validarDireccion();validarApellidos();
+                    validarNombres();validarTamano();">
+                    <input style="display: none;" type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="bloqueo();"/>
                 </div>
             </div>
             </form> 

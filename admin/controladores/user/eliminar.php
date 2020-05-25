@@ -15,7 +15,7 @@
         <?php
             //incluir conexión a la base de datos
             include '../../../config/conexionBD.php';
-            $codigo = $_POST["id"];
+            $codigo = $_POST["codigo"];
 
             //Si voy a eliminar físicamente el registro de la tabla
             //$sql = "DELETE FROM usuario WHERE codigo = '$codigo'";
