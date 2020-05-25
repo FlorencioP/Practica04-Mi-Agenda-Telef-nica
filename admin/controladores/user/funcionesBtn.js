@@ -1,3 +1,4 @@
+//Charly
 function modificar(){
     document.getElementById("aceptar").setAttribute("style" ,"display: inline-block;");
     document.getElementById("cancelar").setAttribute("style" ,"display: inline-block;");
