@@ -7,4 +7,5 @@ function modificar(){
     document.getElementById("Direccion").disabled=false;
     document.getElementById("Fecha").disabled=false;
     document.getElementById("Correo").disabled=false;
+    
 }
