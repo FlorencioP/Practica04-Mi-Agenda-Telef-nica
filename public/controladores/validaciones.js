@@ -33,6 +33,7 @@ function validarForm2(id){
                 document.getElementById("informacion").innerHTML = this.responseText; 
             } 
         }; 
+        console.log(id);
         xmlhttp.open("GET","../../admin/controladores/user/modificar.php?id="+id,true); 
         xmlhttp.send();
         return bandera=true;
