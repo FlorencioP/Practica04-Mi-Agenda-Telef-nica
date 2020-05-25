@@ -1,4 +1,5 @@
 <?php 
+//Charly
     session_start(); 
     
     include '../../config/conexionBD.php'; 

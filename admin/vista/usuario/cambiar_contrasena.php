@@ -15,6 +15,7 @@
     ?>
 
     <?php 
+    //Charly
         $codigo = $_GET["codigo"]; 
     ?> 
     
