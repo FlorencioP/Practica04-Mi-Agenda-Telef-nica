@@ -20,3 +20,8 @@ function bloqueo(){
     document.getElementById("Fecha").disabled=true;
     document.getElementById("Correo").disabled=true;
 }
+
+function cambiarContra(){
+    document.getElementById("centro").setAttribute("style" ,"display: none;");
+    document.getElementById("centro2").setAttribute("style" ,"display: inline-block;");
+}
