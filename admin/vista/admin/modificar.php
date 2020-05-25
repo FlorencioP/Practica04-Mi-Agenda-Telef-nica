@@ -16,6 +16,7 @@
     ?>
 
     <?php 
+    //Charly
         $codigo = $_GET["codigo"]; 
         $sql = "SELECT * FROM usuario where usu_codigo=$codigo"; 
         

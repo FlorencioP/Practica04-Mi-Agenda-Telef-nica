@@ -26,6 +26,7 @@
             <th>Fecha Nacimiento</th> 
         </tr> 
     <?php 
+    //Charly
         include '../../../config/conexionBD.php'; 
         $sql = "SELECT * FROM usuarios"; 
         $result = $conn->query($sql); 

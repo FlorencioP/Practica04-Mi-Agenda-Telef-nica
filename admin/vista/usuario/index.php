@@ -29,6 +29,7 @@
             <th>Fecha Nacimiento</th> 
         </tr>-->
     <?php 
+    //Charly
         include '../../../config/conexionBD.php'; 
         $id=$_GET['id'];
         $sql = "SELECT * FROM usuarios where usu_id=$id"; 
