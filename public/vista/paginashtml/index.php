@@ -46,7 +46,7 @@
                             while ($row = $resultr -> fetch_assoc()){
                                 $rolusu = $row['usu_rol']; 
                             } 
-                            echo "<p> $rolusu </p>";
+                            
                             
                         
                     }
@@ -61,7 +61,7 @@
                 <a href=""  id = "nombre"> <?php echo $nombreP?> </a> <br><br>-->
                     
 
-                <a href="" onclick="usuarios('<?php echo $rolusu ?>')" id = "nombre" >   <?php echo $nombreP?>  </a>
+                <a href="" onclick="usuarios('<?php echo $rolusu ?>','<?php echo $id ?>')" id = "nombre" >   <?php echo $nombreP?>  </a>
 
 
                  <!--onclick="usuarios(<?php $rolusu ?>)"-->
@@ -87,8 +87,8 @@
                 <img src="../imagenes/about.png" alt="Guia TElefonica">
 
 
-                <a href="" id='guiatef' ></a>
-                
+                <a href="" onclick="guia('<?php echo $rolusu ?>','<?php echo $id ?>')" id = 'guiatef' >   </a>
+
                 
 
 
