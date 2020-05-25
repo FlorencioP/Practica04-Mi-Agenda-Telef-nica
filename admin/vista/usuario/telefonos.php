@@ -2,7 +2,7 @@
 <head> 
     <meta charset="UTF-8"> 
     <title>Guia Telefonica</title> 
-    <script src='../../controladores/admin/busquedaNums.js' ></script>
+    <script src='../../controladores/user/busquedaNums.js' ></script>
 </head> 
 
 <body> 
@@ -54,7 +54,7 @@
     <div id="informacion">
 
 
-        <b>Datos de la persona</b>
+        
     
     
     

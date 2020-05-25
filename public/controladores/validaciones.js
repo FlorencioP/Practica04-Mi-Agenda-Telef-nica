@@ -36,7 +36,7 @@ function validarDireccion(){
 
 function validarTipo(){
     var dir=document.getElementById("tipo").value;
-    console.log("sadasd");
+    
     if(dir==""){
         document.getElementById("msjTipo").innerHTML="Tiene que ingresar un tipo de numero de telefono";
         document.getElementById("msjTipo").style.color="red";
