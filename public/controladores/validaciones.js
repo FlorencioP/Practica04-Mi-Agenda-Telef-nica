@@ -21,6 +21,7 @@ function validarForm(){
 
 function validarForm2(){
     if(c != 0 && n!=0 && a!=0 && d!=0 && f!=0 && co!=0){
+
         /*if (window.XMLHttpRequest) { 
             // code for IE7+, Firefox, Chrome, Opera, Safari 
             xmlhttp = new XMLHttpRequest(); 
@@ -36,6 +37,7 @@ function validarForm2(){
         console.log(id);
         xmlhttp.open("GET","../../admin/controladores/user/modificar.php?id="+id,true); 
         xmlhttp.send();*/
+        
         return bandera=true;
     }
     else{

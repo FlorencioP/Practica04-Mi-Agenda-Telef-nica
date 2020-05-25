@@ -35,6 +35,9 @@
             "WHERE usu_id = $codigo";
             if ($conn->query($sql) === TRUE) {
                 echo "Se ha actualizado los datos personales correctamemte!!!<br>";
+//ideota
+                header("Location: ../../vista/usuario/index.php?id=$codigo");
+
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>";
             }
