@@ -43,7 +43,7 @@
                             while ($row = $resultr -> fetch_assoc()){
                                 $rolusu = $row['usu_rol']; 
                             } 
-                            echo "<p> $rolusu </p>";
+                            
                             
                         
                     }
@@ -82,8 +82,10 @@
 
             <blockquote class="icon" id="guia">
                 <img src="../imagenes/about.png" alt="Guia TElefonica">
-                <a href="" id='guiatef' ></a>
-                
+
+
+                <a href="" onclick="guia('<?php echo $rolusu ?>','<?php echo $id ?>')" id = 'guiatef' >   </a>
+
                 
 
 
