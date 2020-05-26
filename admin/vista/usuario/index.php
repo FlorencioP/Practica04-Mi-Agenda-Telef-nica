@@ -109,8 +109,8 @@
 
         <div id="botones">
             <button class="boton" id="modificar" onclick="modificar();">Modificar perfil</button>
-            <button class="boton" id="cambContra" onclick="cambiarContra()">Cambiar contraseña</button>
-            <button class="boton" id="eliminar">Eliminar perfil</button>
+            <button class="boton" id="cambContra" onclick="cambiarContra();">Cambiar contraseña</button>
+            <button class="boton" id="eliminar" onclick="eliminar(<?php echo $id ?>);">Eliminar perfil</button>
         </div>
         <div id="btnAdd">
             <button id="boton">Agregar Telefono</button>

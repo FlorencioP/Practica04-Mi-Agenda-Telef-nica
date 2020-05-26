@@ -25,3 +25,7 @@ function cambiarContra(){
     document.getElementById("centro").setAttribute("style" ,"display: none;");
     document.getElementById("centro2").setAttribute("style" ,"display: inline-block;");
 }
+
+function eliminar(id){
+    window.location= '../../controladores/user/eliminar.php?id='+id;
+}
