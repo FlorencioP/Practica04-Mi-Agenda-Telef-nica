@@ -107,13 +107,42 @@
             </form> 
         </div>
 
+        <div id="centro3" style="display: none">
+            <form id="formulario01" method="POST" action="../../controladores/user/cambiar_contrasena.php?id=<?php echo $id ?>" onsubmit="return validarForm3()">
+            <div id="texto">
+                <div class="inputP">
+                    <label id="text">Numero:</label>
+                    <input type="text" id="Telefono" name="Telefono" size="30" onblur="validarTlf()">
+                    <br>
+                    <span id="msjTelefono" class="error"></span>
+                </div> 
+                <div class="inputP">
+                    <label id="text">Tipo:</label>
+                    <input type="text" id="tipo" name="tipo" size="30" onblur="validarTipo()">
+                    <br>
+                    <span id="msjTipo" class="error"></span>
+                </div>
+                <div class="inputP">
+                    <label id="text">Operadora:</label>
+                    <input type="text" id="operadora" name="operadora" size="30" onblur="validarOperadora()">
+                    <br>
+                    <span id="msjOperadora" class="error"></span>
+                </div>
+                <div id="btnlog">
+                    <input class="btnLog" type="submit" value="Aceptar" name="crear" onclick="validarTlf();validarTipo();validarOperadora()">
+                    <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
+                </div>
+            </div>
+            <br>
+            <!--<input type="submit" id="crear" name="crear" value="Aceptar"/>-->
+            </form> 
+        </div>
+
         <div id="botones">
             <button class="boton" id="modificar" onclick="modificar();">Modificar perfil</button>
             <button class="boton" id="cambContra" onclick="cambiarContra();">Cambiar contraseña</button>
             <button class="boton" id="eliminar" onclick="eliminar(<?php echo $id ?>);">Eliminar perfil</button>
-        </div>
-        <div id="btnAdd">
-            <button id="boton">Agregar Telefono</button>
+            <button class="boton" id="agregarTlf" onclick="agregarTlf()">Agregar Telefono</button>
         </div>
     <?php
         }

@@ -227,8 +227,6 @@ function validarLongTel(){
     }
 }
 
-
-
 function validarFecha(){
     var fecha=document.getElementById("Fecha").value;
     var sepFecha=fecha.split("/");

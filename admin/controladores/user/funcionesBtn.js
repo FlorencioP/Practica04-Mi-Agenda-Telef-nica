@@ -23,7 +23,14 @@ function bloqueo(){
 
 function cambiarContra(){
     document.getElementById("centro").setAttribute("style" ,"display: none;");
+    document.getElementById("centro3").setAttribute("style" ,"display: none;");
     document.getElementById("centro2").setAttribute("style" ,"display: inline-block;");
+}
+
+function agregarTlf(){
+    document.getElementById("centro").setAttribute("style" ,"display: none;");
+    document.getElementById("centro2").setAttribute("style" ,"display: none;");
+    document.getElementById("centro3").setAttribute("style" ,"display: inline-block;");
 }
 
 function eliminar(id){
