@@ -11,6 +11,7 @@
 </head>
     <body>
     <?php
+    //Charly
             include '../../config/conexionBD.php';
             $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
             $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;

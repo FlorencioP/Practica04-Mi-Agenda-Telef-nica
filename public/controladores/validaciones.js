@@ -1,3 +1,4 @@
+//Charly
 var bandera;
 var c=0;
 var n=0;
@@ -7,6 +8,7 @@ var t=0;
 var f=0;
 var co=0;
 var p=0;
+var p2=0;
 var tip=0;
 var op=0;
 function validarForm(){
@@ -17,6 +19,25 @@ function validarForm(){
         return bandera=false;
     }
 }
+
+function validarForm2(){
+    if(c != 0 && n!=0 && a!=0 && d!=0 && f!=0 && co!=0){
+        return bandera=true;
+    }
+    else{
+        return bandera=false;
+    }
+}
+
+function validarForm3(){
+    if(p != 0 && p2 != 0){
+        return bandera=true;
+    }
+    else{
+        return bandera=false;
+    }
+}
+
 
 function validarDireccion(){
     var dir=document.getElementById("Direccion").value;
@@ -340,6 +361,51 @@ function validarPassword(){
         p=0;
     }
 }
+
+
+function validarPassword2(){
+    var password=document.getElementById("newPassword");
+    var passLong=password.value.length;
+    var mayus=0;
+    var minus=0;
+    var carEsp=0;
+    var miAscii = 0;
+    console.log(passLong);
+    if(passLong>=8){
+        document.getElementById("newPassword").style.borderColor="black";
+        document.getElementById("msjPassword2").innerHTML="";
+        for(i=0;i<passLong;i++){
+            miAscii= password.value.charCodeAt(i);
+            if(miAscii >= 65 && miAscii<= 90){
+                mayus=1;
+            }
+            if(miAscii>=97 && miAscii<=122){
+                minus=1;
+            }
+            if(miAscii==36 || miAscii==95 || miAscii==64){
+                carEsp=1;
+            }
+        }
+        if(mayus==1 && minus==1 && carEsp==1){
+            document.getElementById("newPassword").style.borderColor="black";
+            document.getElementById("msjPassword2").innerHTML="";
+            p2=1;
+        }
+        else{
+            document.getElementById("newPassword").style.borderColor="red";
+            document.getElementById("msjPassword2").innerHTML="la contraseña debe tener almenos: una letra mayúscula, una letra minúscula y un carácter especial (@, _, $)";
+            document.getElementById("msjPassword2").style.color="red";
+            p2=0;
+        }
+    }
+    else{
+        document.getElementById("newPassword").style.borderColor="red";
+        document.getElementById("msjPassword2").innerHTML="La longitud tiene que ser minimo de 8 caracteres";
+        document.getElementById("msjPassword2").style.color="red";
+        p2=0;
+    }
+}
+
 
 function validarNumero(elemento){
     if(elemento.value.length > 0){

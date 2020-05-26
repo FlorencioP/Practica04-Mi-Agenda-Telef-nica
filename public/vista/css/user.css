@@ -13,6 +13,24 @@ body{
     border-radius: 10%;
 }
 
+#centro2{
+    float: left;
+    width: 500px;
+    height: max-content;
+    margin-top: 60px;
+    margin-left: 400px;
+    border-radius: 10%;
+}
+
+#centro3{
+    float: left;
+    width: 500px;
+    height: max-content;
+    margin-top: 60px;
+    margin-left: 400px;
+    border-radius: 10%;
+}
+
 div#texto{
     float: left;
     margin-left: 25%;
@@ -48,7 +66,7 @@ div#botones{
     margin-top: 5%;
 }
 
-#boton{
+.boton{
     margin-top: 15%;
 }
 
