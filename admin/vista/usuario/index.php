@@ -1,3 +1,10 @@
+<?php 
+    session_start(); 
+    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
+        header("Location: /SistemaDeGestion/public/vista/login.html"); 
+    } 
+?>
+
 <!DOCTYPE html> 
 <html> 
 
@@ -11,15 +18,7 @@
 </head> 
 
 <body> 
-    
-<?php 
-    session_start(); 
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
-        header("Location: /SistemaDeGestion/public/vista/login.html"); 
-    } 
-?>
     <?php 
-    //Charly
         include '../../../config/conexionBD.php'; 
         $id=$_GET['id'];
         $sql = "SELECT * FROM usuarios where usu_id=$id"; 
@@ -28,6 +27,62 @@
             while($row = $result->fetch_assoc()) {
     ?> 
         <div id="centro"> 
+<<<<<<< HEAD
+            <form id="formulario01" method="POST" action="../../controladores/user/modificar.php?id=<?php echo $id ?>" onsubmit="return validarForm2()">
+            <div id="texto">
+                    <div class="inputP">
+                        <label id="text">Cedula:</label>
+                        <br>
+                        <input type="text" id="Cedula" size="30"  name="cedula" value="<?php echo $row["usu_cedula"]; ?>" onkeyup="validarTamano()" onblur="validarCedula()" disabled>
+                        <br>
+                        <span id="msjCedula" class="error"></span>
+                    </div>
+                    
+                    <div class="inputP">
+                        <label id="text">Nombres:</label>
+                        <input type="text" id="Nombre" size="30" name="nombres" value="<?php echo $row["usu_nombres"]; ?>" onblur="validarNombres()" onkeyup="valLeNom()" disabled>
+                        <br>
+                        <span id="msjNombres" class="error"></span>
+                    </div>
+                
+                    <div class="inputP">
+                        <label id="text">Apellido:</label>
+                        <input type="text" id="Apellido" size="30" name="apellidos" value="<?php echo $row["usu_apellidos"]; ?>" onblur="validarApellidos()" onkeyup="valApeLe()" disabled>
+                        <br>
+                        <span id="msjApellido" class="error"></span>
+                    </div>
+                    
+                    <div class="inputP">
+                        <label id="text">Direccion:</label>
+                        <input type="text" id="Direccion" name="direccion" size="30" value="<?php echo $row["usu_direccion"]; ?>" onblur="validarDireccion()" disabled>
+                        <br>
+                        <span id="msjDireccion" class="error"></span>
+                    </div> 
+                    
+                    <div class="inputP">
+                        <label id="text">Fecha de nacimiento:</label>
+                        <input type="date" id="Fecha" name="fechaNacimiento" value="<?php echo $row["usu_fecha_nacimiento"]; ?>"  onkeyup="validarFecha()" placeholder="Ingrese su
+                        fecha de nacimiento ..." disabled>
+                        <br>
+                        <span id="msjFecha" class="error"></span>
+                    </div>
+                    
+                    <div class="inputP">
+                        <label id="text">Correo:</label>
+                        <input type="text" id="Correo" size="30" name="correo" value="<?php echo $row["usu_correo"]; ?>" onblur="validarCorreo()" disabled>
+                        <br>
+                        <span id="msjCorreo" class="error"></span>
+                    </div>
+
+                    <div id="btnlog">
+                        <input style="display: none;" class="btnLog" type="submit" value="Aceptar" name="aceptar" id="aceptar" onclick="validarCorreo();validarFecha();validarDireccion();validarApellidos();
+                        validarNombres();validarTamano();">
+                        <input style="display: none;" type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="bloqueo();"/>
+                    </div>
+                </div>
+            </form> 
+        </div> 
+=======
         <form id="formulario01" method="POST" action="../../controladores/crear_usuario.php" onsubmit="return validarForm()">
         <div id="texto">
                 <div class="inputP">
@@ -73,23 +128,69 @@
                     <br>
                     <span id="msjCorreo" class="error"></span>
                 </div>
+>>>>>>> 54a28e9e2d08571685108f8a084143a7a5cc9e90
 
+        <div id="centro2" style="display: none">
+            <form id="formulario01" method="POST" action="../../controladores/user/cambiar_contrasena.php?id=<?php echo $id ?>" onsubmit="return validarForm3()">
+            <div id="texto">
+                <div class="inputP">
+                    <label id="text">Contraseña:</label>
+                    <input type="password" id="password" name="contrasena" size="30" onblur="validarPassword()">
+                    <br>
+                    <span id="msjPassword" class="error"></span>
+                </div>
+                <div class="inputP">
+                    <label id="text">Nueva Contraseña:</label>
+                    <input type="password" id="newPassword" name="newContrasena" size="30" onblur="validarPassword2()">
+                    <br>
+                    <span id="msjPassword2" class="error"></span>
+                </div>
                 <div id="btnlog">
-                    <input style="display: none;" class="btnLog" type="submit" value="Aceptar" name="aceptar" id="aceptar" onclick="validarPassword();
-                    validarCorreo();validarFecha();validarTlf();validarDireccion();validarApellidos();
-                    validarNombres();validarTamano();validarTipo();validarOperadora()">
-                    <input style="display: none;" type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
+                    <input class="btnLog" type="submit" value="Aceptar" name="crear" onclick="validarPassword();validarPassword2()">
+                    <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
                 </div>
             </div>
+            <br>
+            <!--<input type="submit" id="crear" name="crear" value="Aceptar"/>-->
             </form> 
-        </div> 
+        </div>
+
+        <div id="centro3" style="display: none">
+            <form id="formulario01" method="POST" action="../../controladores/user/cambiar_contrasena.php?id=<?php echo $id ?>" onsubmit="return validarForm3()">
+            <div id="texto">
+                <div class="inputP">
+                    <label id="text">Numero:</label>
+                    <input type="text" id="Telefono" name="Telefono" size="30" onblur="validarTlf()">
+                    <br>
+                    <span id="msjTelefono" class="error"></span>
+                </div> 
+                <div class="inputP">
+                    <label id="text">Tipo:</label>
+                    <input type="text" id="tipo" name="tipo" size="30" onblur="validarTipo()">
+                    <br>
+                    <span id="msjTipo" class="error"></span>
+                </div>
+                <div class="inputP">
+                    <label id="text">Operadora:</label>
+                    <input type="text" id="operadora" name="operadora" size="30" onblur="validarOperadora()">
+                    <br>
+                    <span id="msjOperadora" class="error"></span>
+                </div>
+                <div id="btnlog">
+                    <input class="btnLog" type="submit" value="Aceptar" name="crear" onclick="validarTlf();validarTipo();validarOperadora()">
+                    <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
+                </div>
+            </div>
+            <br>
+            <!--<input type="submit" id="crear" name="crear" value="Aceptar"/>-->
+            </form> 
+        </div>
+
         <div id="botones">
             <button class="boton" id="modificar" onclick="modificar();">Modificar perfil</button>
-            <button class="boton" id="cambContra">Cambiar contraseña</button>
-            <button class="boton" id="eliminar">Eliminar perfil</button>
-        </div>
-        <div id="btnAdd">
-            <button id="boton">Agregar Telefono</button>
+            <button class="boton" id="cambContra" onclick="cambiarContra();">Cambiar contraseña</button>
+            <button class="boton" id="eliminar" onclick="eliminar(<?php echo $id ?>);">Eliminar perfil</button>
+            <button class="boton" id="agregarTlf" onclick="agregarTlf()">Agregar Telefono</button>
         </div>
     <?php
         }
