@@ -3,7 +3,7 @@
     include "../../../config/conexionBD.php"; 
     //echo "Hola " . $cedula; 
     
-    $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' "; 
+    $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' ORDER BY usu_nombres ASC "; 
     //cambiar la consulta para puede buscar por ocurrencias de letras 
     $result = $conn->query($sql); 
     
@@ -31,11 +31,20 @@
 
             echo " <td>" . $row['usu_correo'] . "</td>"; 
             echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>"; 
+            
+            echo "   <td><button onclick='buscarPorid(" . $row['usu_id'] . ")'>Telefonos</button></td>";
+
+
+            //sIN fUNCION
+            echo " <td><a href='modificar.php?codigo=" . $row['usu_id'] . "'>Modificar</a></td>";
+            //sIN fUNCION
+            echo " <td><a href='modificar.php?codigo=" . $row['usu_id'] . "'>Eliminar</a></td>";
+
             echo "</tr>"; 
         } 
     } else { 
         echo "<tr>"; 
-        echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>"; 
+        echo " <td colspan='7'> No existen usuarios registrados en el sistema </td>"; 
         echo "</tr>"; 
     } 
     echo "</table>"; 

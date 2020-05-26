@@ -1,24 +1,12 @@
 <?php 
-    //incluir conexión a la base de datos
-   // echo "<p>Si llega pa aca</p>"; 
+
     include "../../../config/conexionBD.php"; 
-    $cedula = $_GET['cedula']; 
-    //echo "Hola " . $cedula; 
+    $idcel = $_GET['id']; 
 
-
-    
-     
-    
-    $sqlc = "SELECT usu_id FROM usuarios WHERE usu_eliminado = 'N' and usu_cedula='$cedula'"; 
-
-    $resultc = $conn->query($sqlc);
-    while ($row = $resultc -> fetch_assoc()){
-        $idcel = $row['usu_id']; 
-    } 
-    
 
     $sql = "SELECT * FROM telefonos WHERE tel_eliminado = 'N' and USUARIOS_usu_id= '$idcel' "; 
-    //cambiar la consulta para puede buscar por ocurrencias de letras 
+
+
     $result = $conn->query($sql); 
     echo " <table style='width:100%'> 
     <tr> <th>Numero</th> 
@@ -36,7 +24,7 @@
              
     } else { 
         echo "<tr>"; 
-        echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>"; 
+        echo " <td colspan='7'> Este Usuario no tiene Telefonos registrados </td>"; 
         echo "</tr>"; 
     } 
     echo "</table>"; 

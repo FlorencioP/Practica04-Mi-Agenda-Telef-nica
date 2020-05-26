@@ -1,10 +1,10 @@
 <?php 
     //incluir conexión a la base de datos 
     include "../../../config/conexionBD.php"; 
-    $cedula = $_GET['cedula']; 
+    $id = $_GET['id']; 
     //echo "Hola " . $cedula; 
     
-    $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_cedula='$cedula' ORDER BY usu_nombres ASC"; 
+    $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_id='$id' ORDER BY usu_nombres ASC"; 
     //cambiar la consulta para puede buscar por ocurrencias de letras 
     $result = $conn->query($sql); 
     
@@ -45,7 +45,7 @@
         } 
     } else { 
         echo "<tr>"; 
-        echo " <td colspan='7'> No existe un usuarios registrado en el sistema con esa cedula </td>"; 
+        echo " <td colspan='7'>No se encontro al usuario </td>"; 
         echo "</tr>"; 
     } 
     echo "</table>"; 

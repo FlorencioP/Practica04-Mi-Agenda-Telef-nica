@@ -124,6 +124,8 @@
             <?php 
                 include '../../../config/conexionBD.php'; 
                 $id=$_GET['id'];
+
+                
                 $sql = "SELECT * FROM telefonos where USUARIOS_usu_id=$id"; 
                 $result = $conn->query($sql); 
                 if ($result->num_rows > 0) {

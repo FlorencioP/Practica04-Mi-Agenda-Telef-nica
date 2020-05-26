@@ -27,7 +27,7 @@
 
     <form id="formularioC">
 
-        <label for="cedula">Cedula de la peson dfasdasda</label> <br>
+        <label for="cedula">Cedula de la pesona</label> <br>
 
         <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese la cedula de la persona"/> <br>
 
@@ -49,7 +49,7 @@
 
     </form>
 
-
+    <button  onclick="mostrarTodos()">Mostrar a Todos los usuarios </button>
     
     <div id="usuarios">
 
