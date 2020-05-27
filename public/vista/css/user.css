@@ -4,6 +4,11 @@ body{
     margin: 0px;
 }
 
+span{
+    color: blue;
+    text-decoration: underline;
+}
+
 #centro{
     float: left;
     width: 500px;

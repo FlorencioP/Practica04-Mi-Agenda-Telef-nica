@@ -162,7 +162,7 @@
             font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
             .tg .tg-46ru{background-color:#96fffb;border-color:inherit;text-align:left;vertical-align:top}
             .tg .tg-y698{background-color:#efefef;border-color:inherit;text-align:left;vertical-align:top}
-            .tg .tg-y6988{background-color:rgb(240, 248, 255,0.5);border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-y6988{background-color:rgb(240, 248, 255,0.6);border-color:inherit;text-align:left;vertical-align:top}
         </style>
         <table class="tg" style="width:100%">
             <thead>
@@ -187,9 +187,8 @@
                     <td class="tg-y698"><?php echo $row["tel_numero"] ?></td>
                     <td class="tg-y698"><?php echo $row["tel_tipo"] ?></td>
                     <td class="tg-y698"><?php echo $row["tel_operadora"] ?></td>
-                    <!--<td class="tg-y698"><a href='modificar.php?codigo=" . <?php echo $row["tel_id"] ?> . "'>Modificar</a></td>-->
                     <td class="tg-y698"><span style="cursor: pointer" onclick="cambiarRenglon(this,<?php echo $row['tel_id'] ?>,<?php echo $id ?>)">Modificar</span></td>
-                    <td class="tg-y698"><a href='eliminar.php?codigo=" . <?php echo $row["tel_id"] ?> . "'>Eliminar</a></td>
+                    <td class="tg-y698"><a href='../../controladores/user/elimTelefono.php?idT=<?php echo $row["tel_id"] ?>+&id=<?php echo $id ?>'>Eliminar</a></td>
                 </tr> 
             <?php 
                }
