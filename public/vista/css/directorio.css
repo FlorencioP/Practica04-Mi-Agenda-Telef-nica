@@ -62,6 +62,16 @@ p{
 
 }
 
+#add{
+
+    clear: both;
+    float: left;
+    margin-left: 44%;
+    margin-bottom: 1%;
+
+}
+
+
 b{
     clear: both;
     float: left;

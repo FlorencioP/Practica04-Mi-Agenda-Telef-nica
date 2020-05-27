@@ -14,10 +14,10 @@
         
         if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
             header("Location: ../../../public/vista/paginashtml/login.html"); 
-        } else {
-            $id = $_GET['id'];
         }
-
+        
+        
+        $id = $_GET['id'];
         $mtod = null;
 
 
@@ -51,6 +51,8 @@
     </form>
 
     <button id="reset" onclick="mostrarTodos()">Mostrar a Todos los usuarios </button>
+
+    <button id="add" onclick="nuevoUsuario( <?php echo $id ?> )">Añadir un usuario </button>
     
     <div id="usuarios">
 
