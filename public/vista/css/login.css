@@ -1,0 +1,14 @@
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /*Se queda en el centro no se mueve*/
+    background-image: url(../imagenes/kirbyini.jpg);
+    
+}
+
+#formulario01{
+    
+    background-color: rgb(255, 255, 255,0.92);
+}

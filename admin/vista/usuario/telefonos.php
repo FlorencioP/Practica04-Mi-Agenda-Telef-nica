@@ -2,7 +2,10 @@
 <head> 
     <meta charset="UTF-8"> 
     <title>Guia Telefonica</title> 
+
+    <link rel="stylesheet" type="text/css" href="../../../public/vista/css/directorio.css"/>
     <script src='../../controladores/user/busquedaNums.js' ></script>
+
 </head> 
 
 <body> 

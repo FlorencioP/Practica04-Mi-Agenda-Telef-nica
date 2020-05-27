@@ -2,6 +2,7 @@
 <head> 
     <meta charset="UTF-8"> 
     <title>Guia Telefonica</title> 
+    <link rel="stylesheet" type="text/css" href="../../../public/vista/css/directorio.css"/>
     <script src='../../controladores/admin/busquedaNums.js' ></script>
 </head> 
 
@@ -49,7 +50,7 @@
 
     </form>
 
-    <button  onclick="mostrarTodos()">Mostrar a Todos los usuarios </button>
+    <button id="reset" onclick="mostrarTodos()">Mostrar a Todos los usuarios </button>
     
     <div id="usuarios">
 
