@@ -38,6 +38,14 @@ function validarForm3(){
     }
 }
 
+function validarForm4(){
+    if(t != 0 && tip != 0 && op != 0){
+        return bandera=true;
+    }
+    else{
+        return bandera=false;
+    }
+}
 
 function validarDireccion(){
     var dir=document.getElementById("Direccion").value;
@@ -211,6 +219,17 @@ function validarTlf(){
     validarLongTel()
 }
 
+function validarTlf2(){
+    console.log("holaaaaaa");
+    var telf=document.getElementById("numeroT").value;
+    var telfLong=telf.length;
+    validarNumero(document.getElementById("numeroT"));
+    if(telfLong > 10){
+        document.getElementById("numeroT").value=telf.slice(0,10);
+    }
+    validarLongTel2()
+}
+
 function validarLongTel(){
     var telf=document.getElementById("Telefono").value;
     var telfLong=telf.length;
@@ -224,6 +243,19 @@ function validarLongTel(){
         document.getElementById("Telefono").style.borderColor="black";
         document.getElementById("msjTelefono").innerHTML=""
         t=1;
+    }
+}
+
+function validarLongTel2(){
+    var telf=document.getElementById("numeroT").value;
+    var telfLong=telf.length;
+    if(telfLong < 7){
+        document.getElementById("numeroT").style.borderColor="red";
+        t2=0;
+    }
+    else{
+        document.getElementById("numeroT").style.borderColor="black";
+        t2=1;
     }
 }
 
