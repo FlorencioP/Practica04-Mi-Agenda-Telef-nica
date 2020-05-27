@@ -38,6 +38,14 @@ function validarForm3(){
     }
 }
 
+function validarForm4(){
+    if(t != 0 && tip != 0 && op != 0){
+        return bandera=true;
+    }
+    else{
+        return bandera=false;
+    }
+}
 
 function validarDireccion(){
     var dir=document.getElementById("Direccion").value;

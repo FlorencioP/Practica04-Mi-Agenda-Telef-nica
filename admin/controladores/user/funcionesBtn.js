@@ -21,6 +21,12 @@ function bloqueo(){
     document.getElementById("Correo").disabled=true;
 }
 
+function btnCancelar(){
+    document.getElementById("centro").setAttribute("style" ,"display: inline-block;");
+    document.getElementById("centro2").setAttribute("style" ,"display: none;");
+    document.getElementById("centro3").setAttribute("style" ,"display: none;");
+}
+
 function cambiarContra(){
     document.getElementById("centro").setAttribute("style" ,"display: none;");
     document.getElementById("centro3").setAttribute("style" ,"display: none;");
@@ -34,5 +40,8 @@ function agregarTlf(){
 }
 
 function eliminar(id){
-    window.location= '../../controladores/user/eliminar.php?id='+id;
+    var con=confirm("esta seguro que quiere eliminar su cuenta");
+    if(con === true){
+        window.location= '../../controladores/user/eliminar.php?id='+id;
+    }
 }
