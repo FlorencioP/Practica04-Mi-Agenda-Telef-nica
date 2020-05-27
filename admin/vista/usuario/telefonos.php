@@ -13,7 +13,7 @@
     <?php 
         session_start(); 
         if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
-            header("Location: /SistemaDeGestion/public/vista/login.html"); 
+            header("Location: ../../public/vista/paginashtml/login.html"); 
         } else {
             $id = $_GET['id'];
         }

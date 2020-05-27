@@ -27,14 +27,18 @@ function guia( rol,id ){
     if (rol == "A"){
 
         document.getElementById("guiatef").setAttribute("href" ,"../../../admin/vista/admin/telefonos.php?id="+id )
-        
+
+
+
     }else{
 
+
         document.getElementById("guiatef").setAttribute("href" ,"../../../admin/vista/usuario/telefonos.php?id="+id )
+        
     }
 }
-
+document.getElementById("guiatef").innerHTML='Entrar a la guia Telefonica'
 document.getElementById("opcion2").setAttribute("href" ,"../../../config/cerrar_sesion.php" )
 document.getElementById("opcion2").innerHTML='Cerrar Sesion'
 
-document.getElementById("guiatef").innerHTML='Entrar a la guia Telefonica'
+
