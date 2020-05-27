@@ -18,6 +18,24 @@
 </head> 
 
 <body> 
+    
+<?php 
+        session_start(); 
+        if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
+            header("Location: ../../../public/vista/paginashtml/login.html"); 
+        } 
+    ?>
+
+    <table style="width:100%"> 
+        <tr> 
+            <th>Cedula</th> 
+            <th>Nombres</th> 
+            <th>Apellidos</th> 
+            <th>Dirección</th> 
+            <!--<th>Telefono</th> -->
+            <th>Correo</th> 
+            <th>Fecha Nacimiento</th> 
+        </tr> 
     <?php 
         include '../../../config/conexionBD.php'; 
         $id=$_GET['id'];

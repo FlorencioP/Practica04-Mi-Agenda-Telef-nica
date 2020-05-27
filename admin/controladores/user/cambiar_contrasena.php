@@ -1,7 +1,7 @@
 <?php 
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
         //echo "<script src='../scripts/indexopclog.js?id=$id' ></script>";
-        header("Location: /SistemaDeGestion/public/vista/login.html");
+        header("Location: ../../../public/vista/paginashtml/login.html");
     } 
 ?>
 

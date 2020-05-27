@@ -2,7 +2,10 @@
 <head> 
     <meta charset="UTF-8"> 
     <title>Guia Telefonica</title> 
+
+    <link rel="stylesheet" type="text/css" href="../../../public/vista/css/directorio.css"/>
     <script src='../../controladores/user/busquedaNums.js' ></script>
+
 </head> 
 
 <body> 
@@ -10,7 +13,7 @@
     <?php 
         session_start(); 
         if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
-            header("Location: /SistemaDeGestion/public/vista/login.html"); 
+            header("Location: ../../public/vista/paginashtml/login.html"); 
         } else {
             $id = $_GET['id'];
         }

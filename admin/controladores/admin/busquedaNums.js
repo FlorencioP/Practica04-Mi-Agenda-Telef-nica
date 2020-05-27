@@ -143,3 +143,10 @@ function buscarPorIdUser( id ) {
     xmlhttp.send(); 
 
 }
+
+
+function nuevoUsuario( id ){
+    
+    location.replace("../../vista/admin/registrar_usuario.php?id="+id);
+    
+}
