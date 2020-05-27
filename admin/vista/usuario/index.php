@@ -1,7 +1,7 @@
 <?php 
     session_start(); 
     if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
-        header("Location: ../../../public/vista/paginashtml/login.html"); 
+        header("Location: /SistemaDeGestion/public/vista/login.html"); 
     } 
 ?>
 
@@ -30,51 +30,60 @@
             <a href="../../../public/vista/paginashtml/index.php?id=<?php echo $id?>"><img src="../../../public/vista/imagenes/kirby_atras.png" id="ima"></a>
         </div>
         <div id="centro"> 
-        <form id="formulario01" method="POST" action="../../controladores/crear_usuario.php" onsubmit="return validarForm()">
-        <div id="texto">
-                <div class="inputP">
-                    <label id="text">Cedula:</label>
-                    <br>
-                    <input type="text" id="Cedula" size="30"  name="cedula" value="<?php echo $row["usu_cedula"]; ?>" onkeyup="validarTamano()" onblur="validarCedula()" disabled>
-                    <br>
-                    <span id="msjCedula" class="error"></span>
-                </div>
+            <form id="formulario01" method="POST" action="../../controladores/user/modificar.php?id=<?php echo $id ?>" onsubmit="return validarForm2()">
+            <div id="texto">
+                    <div class="inputP">
+                        <label id="text">Cedula:</label>
+                        <br>
+                        <input type="text" id="Cedula" size="30"  name="cedula" value="<?php echo $row["usu_cedula"]; ?>" onkeyup="validarTamano()" onblur="validarCedula()" disabled>
+                        <br>
+                        <span id="msjCedula" class="error"></span>
+                    </div>
+                    
+                    <div class="inputP">
+                        <label id="text">Nombres:</label>
+                        <input type="text" id="Nombre" size="30" name="nombres" value="<?php echo $row["usu_nombres"]; ?>" onblur="validarNombres()" onkeyup="valLeNom()" disabled>
+                        <br>
+                        <span id="msjNombres" class="error"></span>
+                    </div>
                 
-                <div class="inputP">
-                    <label id="text">Nombres:</label>
-                    <input type="text" id="Nombre" size="30" name="nombres" value="<?php echo $row["usu_nombres"]; ?>" onblur="validarNombres()" onkeyup="valLeNom()" disabled>
-                    <br>
-                    <span id="msjNombres" class="error"></span>
+                    <div class="inputP">
+                        <label id="text">Apellido:</label>
+                        <input type="text" id="Apellido" size="30" name="apellidos" value="<?php echo $row["usu_apellidos"]; ?>" onblur="validarApellidos()" onkeyup="valApeLe()" disabled>
+                        <br>
+                        <span id="msjApellido" class="error"></span>
+                    </div>
+                    
+                    <div class="inputP">
+                        <label id="text">Direccion:</label>
+                        <input type="text" id="Direccion" name="direccion" size="30" value="<?php echo $row["usu_direccion"]; ?>" onblur="validarDireccion()" disabled>
+                        <br>
+                        <span id="msjDireccion" class="error"></span>
+                    </div> 
+                    
+                    <div class="inputP">
+                        <label id="text">Fecha de nacimiento:</label>
+                        <input type="date" id="Fecha" name="fechaNacimiento" value="<?php echo $row["usu_fecha_nacimiento"]; ?>"  onkeyup="validarFecha()" placeholder="Ingrese su
+                        fecha de nacimiento ..." disabled>
+                        <br>
+                        <span id="msjFecha" class="error"></span>
+                    </div>
+                    
+                    <div class="inputP">
+                        <label id="text">Correo:</label>
+                        <input type="text" id="Correo" size="30" name="correo" value="<?php echo $row["usu_correo"]; ?>" onblur="validarCorreo()" disabled>
+                        <br>
+                        <span id="msjCorreo" class="error"></span>
+                    </div>
+
+                    <div id="btnlog">
+                        <input style="display: none;" class="btnLog" type="submit" value="Aceptar" name="aceptar" id="aceptar" onclick="validarCorreo();validarFecha();validarDireccion();validarApellidos();
+                        validarNombres();validarTamano();">
+                        <input style="display: none;" type="reset" id="cancelar" name="cancelar" value="Cancelar" onclick="bloqueo();"/>
+                    </div>
                 </div>
-            
-                <div class="inputP">
-                    <label id="text">Apellido:</label>
-                    <input type="text" id="Apellido" size="30" name="apellidos" value="<?php echo $row["usu_apellidos"]; ?>" onblur="validarApellidos()" onkeyup="valApeLe()" disabled>
-                    <br>
-                    <span id="msjApellido" class="error"></span>
-                </div>
-                
-                <div class="inputP">
-                    <label id="text">Direccion:</label>
-                    <input type="text" id="Direccion" name="direccion" size="30" value="<?php echo $row["usu_direccion"]; ?>" onblur="validarDireccion()" disabled>
-                    <br>
-                    <span id="msjDireccion" class="error"></span>
-                </div> 
-                
-                <div class="inputP">
-                    <label id="text">Fecha de nacimiento:</label>
-                    <input type="date" id="Fecha" name="fechaNacimiento" value="<?php echo $row["usu_fecha_nacimiento"]; ?>"  onkeyup="validarFecha()" placeholder="Ingrese su
-                    fecha de nacimiento ..." disabled>
-                    <br>
-                    <span id="msjFecha" class="error"></span>
-                </div>
-                
-                <div class="inputP">
-                    <label id="text">Correo:</label>
-                    <input type="text" id="Correo" size="30" name="correo" value="<?php echo $row["usu_correo"]; ?>" onblur="validarCorreo()" disabled>
-                    <br>
-                    <span id="msjCorreo" class="error"></span>
-                </div>
+            </form> 
+        </div> 
 
         <div id="centro2" style="display: none">
             <form id="formulario01" method="POST" action="../../controladores/user/cambiar_contrasena.php?id=<?php echo $id ?>" onsubmit="return validarForm3()">
@@ -172,9 +181,7 @@
             <?php 
                 include '../../../config/conexionBD.php'; 
                 $id=$_GET['id'];
-
-                
-                $sql = "SELECT * FROM telefonos where USUARIOS_usu_id=$id"; 
+                $sql = "SELECT * FROM telefonos where USUARIOS_usu_id=$id and 	tel_eliminado='N' "; 
                 $result = $conn->query($sql); 
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
