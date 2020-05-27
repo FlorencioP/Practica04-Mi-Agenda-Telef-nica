@@ -2,30 +2,17 @@
 <head> 
     <meta charset="UTF-8"> 
     <title>Guia Telefonica</title> 
+
     <link rel="stylesheet" type="text/css" href="../../../public/vista/css/directorio.css"/>
-    <script src='../../controladores/admin/busquedaNums.js' ></script>
+    <script src='../scripts/busquedaNums.js' ></script>
+
 </head> 
 
-<body onload="mostrarTodos();"> 
+<body> 
     
-    <?php 
-        session_start();
-        
-        
-        if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
-            header("Location: ../../../public/vista/paginashtml/login.html"); 
-        }
-        
-        
-        $id = $_GET['id'];
-        $mtod = null;
-
-
-    ?>
 
     <p>Menu de Busqueda</p>
     
-
     <form id="formularioC">
 
         <label for="cedula">Cedula de la pesona</label> <br>
@@ -50,20 +37,10 @@
 
     </form>
 
-    <button id="reset" onclick="mostrarTodos()">Mostrar a Todos los usuarios </button>
 
-    <button id="add" onclick="nuevoUsuario( <?php echo $id ?> )">Añadir un usuario </button>
     
-    <div id="usuarios">
 
 
-        
-    
-    
-    
-    </div>
-    
-    
     
     <div id="informacion">
 

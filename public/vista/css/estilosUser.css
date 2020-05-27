@@ -16,3 +16,13 @@ body{
 #centro3{
     background-color: rgb(255, 255, 255,0.95);
 }
+@font-face {
+    font-family: "PIX";
+    src: url("../formatoL/pixx.ttf");
+
+}
+
+* {
+    font-family: "PIX";
+    font-size: 100%;
+}

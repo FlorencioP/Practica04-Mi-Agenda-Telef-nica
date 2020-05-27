@@ -105,3 +105,13 @@ div#tabla{
     margin-bottom: 15px;
 }
 
+@font-face {
+    font-family: "PIX";
+    src: url("../formatoL/pixx.ttf");
+
+}
+
+* {
+    font-family: "PIX";
+    font-size: 100%;
+}

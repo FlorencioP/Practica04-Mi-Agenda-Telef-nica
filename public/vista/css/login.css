@@ -1,0 +1,37 @@
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /*Se queda en el centro no se mueve*/
+    background-image: url(../imagenes/kirbyini.jpg);
+    
+}
+
+#formulario01{
+    float: left;
+    background-color: rgb(255, 255, 255,0.9);
+    border: black thick solid;
+    padding: 3%;
+    border-radius: 25px;
+    font-size: 200%;
+    margin-left: 11%;
+    margin-top: 7%;
+}
+
+input{
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+@font-face {
+    font-family: "PIX";
+    src: url("../formatoL/pixx.ttf");
+
+}
+
+* {
+    font-family: "PIX";
+    font-size: 100%;
+}
