@@ -1,4 +1,8 @@
 body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /*Se queda en el centro no se mueve*/
     /*background-color: rgb(187, 65, 65);*/
     background-image: url(../imagenes/kirbyFon.png);
     /*background-color: black;*/
@@ -25,4 +29,38 @@ body{
 * {
     font-family: "PIX";
     font-size: 100%;
+}
+
+#BusquedaTelf {
+    
+    float: left;
+    margin: 1%;
+    font-size: 150%;
+    padding-left: 40%;
+}
+#BusquedaTelf label{
+    background-color: rgb(255, 255, 255,0.50);
+    padding: 2%;
+}
+
+#numMos{
+    clear: both;
+    float: left;
+    margin: 1%;
+    font-size: 150%;
+    margin-left: 42%;
+}
+
+
+b{
+    clear: both;
+    float: left;
+    margin-left: 40%;
+    margin-bottom: 1%;
+    margin-top: 6%;
+    background-color: rgb(255, 255, 255,0.9);
+    border: black thick solid;
+    padding: 3%;
+    border-radius: 25px;
+    font-size: 130%;
 }
