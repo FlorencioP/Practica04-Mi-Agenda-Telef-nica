@@ -66,8 +66,8 @@ function ocultarTelfs() {
 
 
 
-function mostrarTodos() {
-
+function mostrarTodos(id) {
+    console.log(id);
 
     if (window.XMLHttpRequest) {
          // code for IE7+, Firefox, Chrome, Opera, Safari 
@@ -84,7 +84,7 @@ function mostrarTodos() {
             } 
         }; 
     ocultarTelfs()
-    xmlhttp.open("GET","../../controladores/admin/peticionTodos.php",true); 
+    xmlhttp.open("GET","../../controladores/admin/peticionTodos.php?id="+id,true); 
     xmlhttp.send(); 
     
 

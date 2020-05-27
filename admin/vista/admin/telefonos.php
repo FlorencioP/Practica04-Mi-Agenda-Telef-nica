@@ -1,14 +1,5 @@
 <!DOCTYPE html> 
-<head> 
-    <meta charset="UTF-8"> 
-    <title>Guia Telefonica</title> 
-    <link rel="stylesheet" type="text/css" href="../../../public/vista/css/directorio.css"/>
-    <script src='../../controladores/admin/busquedaNums.js' ></script>
-</head> 
-
-<body onload="mostrarTodos();"> 
-    
-    <?php 
+<?php 
         session_start();
         
         
@@ -22,6 +13,17 @@
 
 
     ?>
+
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Guia Telefonica</title> 
+    <link rel="stylesheet" type="text/css" href="../../../public/vista/css/directorio.css"/>
+    <script src='../../controladores/admin/busquedaNums.js' ></script>
+</head> 
+
+<body onload="mostrarTodos(<?php echo $id ?>);"> 
+    
+
 
     <p>Menu de Busqueda</p>
     

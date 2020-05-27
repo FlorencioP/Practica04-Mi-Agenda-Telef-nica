@@ -2,6 +2,7 @@
     //incluir conexión a la base de datos 
     include "../../../config/conexionBD.php"; 
     //echo "Hola " . $cedula; 
+    $id = $_GET['id'];
     
     $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' ORDER BY usu_nombres ASC "; 
     //cambiar la consulta para puede buscar por ocurrencias de letras 
@@ -35,8 +36,8 @@
             echo "   <td class='tg-y698'><button onclick='buscarPorid(" . $row['usu_id'] . ")'>Telefonos</button></td>";
 
 
-            //sIN fUNCION
-            echo " <td class='tg-y698'><a href='modificar.php?codigo=" . $row['usu_id'] . "'>Modificar</a></td>";
+           
+            echo " <td class='tg-y698'><a href='../../vista/admin/indexMod.php?id=" . $id . " &idmod=" . $row['usu_id'] ."'>Modificar</a></td>";
 
 
             echo "</tr>"; 

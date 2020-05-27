@@ -3,7 +3,8 @@
     if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === FALSE){ 
         header("Location: ../../../public/vista/paginashtml/login.html"); 
     } 
-    $id=$_GET['id'];
+    $id=$_GET['idmod'];
+    $idmod=$_GET['id'];
 ?>
 
 <!DOCTYPE html> 
@@ -14,12 +15,12 @@
     <title>Gestión de usuarios</title> 
     <link   rel="stylesheet" type="text/css" href="../../../public/vista/css/user.css"/>
     <link   rel="stylesheet" type="text/css" href="../../../public/vista/css/estilosUser.css"/>
-    <script type="text/javascript" src="../../../public/controladores/validaciones.js"></script>
-    <script type="text/javascript" src="../../controladores/admin/funcionesBtn.js"></script>
-    <script src='../../controladores/admin/numsUser.js' ></script>
+    <script type="text/javascript" src="../../../public/controladores/validacionesMOD.js"></script>
+    <script type="text/javascript" src="../../controladores/admin/funcionesBtnMOD.js"></script>
+    <script src='../../controladores/admin/numsUserMOD.js' ></script>
 </head> 
 
-<body onload="mostrarNumero(<?php echo $id ?>);"> 
+<body onload="mostrarNumero(<?php echo $id ?>,<?php echo $idmod ?>);"> 
     
 <?php 
         
@@ -38,10 +39,10 @@
             while($row = $result->fetch_assoc()) {
     ?> 
         <div id="atras">
-            <a href="../../../public/vista/paginashtml/index.php?id=<?php echo $id?>"><img src="../../../public/vista/imagenes/kirby_atras.png" id="ima"></a>
+            <a href="../../../admin/vista/admin/telefonos.php?id=<?php echo $idmod?>"><img src="../../../public/vista/imagenes/kirby_atras.png" id="ima"></a>
         </div>
         <div id="centro"> 
-            <form id="formulario01" method="POST" action="../../controladores/admin/modificar.php?id=<?php echo $id ?>" onsubmit="return validarForm2()">
+            <form id="formulario01" method="POST" action="../../controladores/admin/modificarMOD.php?id=<?php echo $id ?> &idmod=<?php echo $idmod ?>" onsubmit="return validarForm2()">
             <div id="texto">
                     <div class="inputP">
                         <label id="text">Cedula:</label>
@@ -97,7 +98,8 @@
         </div> 
 
         <div id="centro2" style="display: none">
-            <form id="formulario01" method="POST" action="../../controladores/admin/cambiar_contrasena.php?id=<?php echo $id ?>" onsubmit="return validarForm3()">
+
+            <form id="formulario01" method="POST" action="../../controladores/admin/cambiar_contrasenaMOD.php?id=<?php echo $id ?> &idmod=<?php echo $idmod ?>" onsubmit="return validarForm3()">
             <div id="texto">
                 <div class="inputP">
                     <label id="text">Contraseña:</label>
@@ -122,7 +124,7 @@
         </div>
 
         <div id="centro3" style="display: none">
-            <form id="formulario01" method="POST" action="../../controladores/admin/addTelefono.php?id=<?php echo $id ?>" onsubmit="return validarForm4()">
+            <form id="formulario01" method="POST" action="../../controladores/admin/addTelefonoMOD.php?id=<?php echo $id ?> &idmod=<?php echo $idmod ?>" onsubmit="return validarForm4()">
             <div id="texto">
                 <div class="inputP">
                     <label id="text">Numero:</label>
@@ -155,7 +157,7 @@
         <div id="botones">
             <button class="boton" id="modificar" onclick="modificar();">Modificar perfil</button>
             <button class="boton" id="cambContra" onclick="cambiarContra();">Cambiar contraseña</button>
-            <button class="boton" id="eliminar" onclick="eliminar(<?php echo $id ?>);">Eliminar perfil</button>
+            <button class="boton" id="eliminar" onclick="eliminar(<?php echo $id ?>, <?php echo $idmod ?>);">Eliminar perfil</button>
             <button class="boton" id="agregarTlf" onclick="agregarTlf()">Agregar Telefono</button>
         </div>
     <?php
@@ -181,10 +183,12 @@
  </form>
 
 
- <input type="button" id="numMos" name="numMos" value="Mostrar Numeros" onclick="mostrarNumero(<?php echo $id ?>);" /><br>  
+ <input type="button" id="numMos" name="numMos" value="Mostrar Numeros" onclick="mostrarNumero(<?php echo $id ?>,<?php echo $idmod ?>);" /><br>  
 
 
     <div id="tabla" >
+
+
 
 
     </div>

@@ -36,8 +36,7 @@
             
 
 
-            //sIN fUNCION
-            echo " <td class='tg-y698'><a href='modificar.php?codigo=" . $row['usu_id'] . "'>Modificar</a></td>";
+            echo " <td class='tg-y698'><a href='../../vista/admin/indexMod.php?id=" . $id . " &idmod=" . $row['usu_id'] ."'>Modificar</a></td>";
             
             
             echo "</tr>"; 
