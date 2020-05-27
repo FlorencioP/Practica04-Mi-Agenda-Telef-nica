@@ -4,12 +4,28 @@ body{
     margin: 0px;
 }
 
+#atras{
+    float: left;
+    height: 15%;
+    width: 15%;
+}
+
+#ima{
+    height: 100%;
+    width: 100%;
+}
+
+span{
+    color: blue;
+    text-decoration: underline;
+}
+
 #centro{
     float: left;
     width: 500px;
     height: max-content;
-    margin-top: 60px;
-    margin-left: 400px;
+    margin-top: 5%;
+    margin-left: 17%;
     border-radius: 10%;
 }
 
@@ -17,8 +33,8 @@ body{
     float: left;
     width: 500px;
     height: max-content;
-    margin-top: 60px;
-    margin-left: 400px;
+    margin-top: 5%;
+    margin-left: 17%;
     border-radius: 10%;
 }
 
@@ -26,8 +42,8 @@ body{
     float: left;
     width: 500px;
     height: max-content;
-    margin-top: 60px;
-    margin-left: 400px;
+    margin-top: 5%;
+    margin-left: 17%;
     border-radius: 10%;
 }
 
