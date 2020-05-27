@@ -26,6 +26,9 @@
         if ($result->num_rows > 0) { 
             while($row = $result->fetch_assoc()) {
     ?> 
+        <div id="atras">
+            <a href="../../../public/vista/paginashtml/index.php?id=<?php echo $id?>"><img src="../../../public/vista/imagenes/kirby_atras.png" id="ima"></a>
+        </div>
         <div id="centro"> 
             <form id="formulario01" method="POST" action="../../controladores/user/modificar.php?id=<?php echo $id ?>" onsubmit="return validarForm2()">
             <div id="texto">
