@@ -1,7 +1,7 @@
 <?php 
     //incluir conexión a la base de datos 
     include "../../../config/conexionBD.php"; 
-    $id = $_GET['id']; 
+    @$id = $_GET['id']; 
     //echo "Hola " . $cedula; 
     
     $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_id='$id' ORDER BY usu_nombres ASC"; 

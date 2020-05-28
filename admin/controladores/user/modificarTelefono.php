@@ -14,12 +14,12 @@
         <?php
             //incluir conexión a la base de datos
             include '../../../config/conexionBD.php';
-            $codigo = $_GET["idT"];
-            $id=$_GET["id"];
+            @$codigo = $_GET["idT"];
+            @$id=$_GET["id"];
             $telefono = isset($_GET["numeroT"]) ? trim($_GET["numeroT"]): null;
             $tipo = isset($_GET["tipoT"]) ? trim($_GET["tipoT"]): null;
             $operadora = isset($_GET["operadoraT"]) ? trim($_GET["operadoraT"]): null;
-            $sql = "UPDATE telefonos " .
+            @$sql = "UPDATE telefonos " .
             "SET tel_numero = '$telefono', " .
             "tel_tipo = '$tipo', " .
             "tel_operadora = '$operadora', " .

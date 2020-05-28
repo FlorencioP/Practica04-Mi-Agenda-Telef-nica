@@ -14,9 +14,9 @@
         <?php
             //incluir conexión a la base de datos
             include '../../../config/conexionBD.php';
-            $codigo = $_GET["id"];
+            @$codigo = $_GET["id"];
 
-            $idmod=$_GET['idmod'];
+            @$idmod=$_GET['idmod'];
     
             $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
             $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;

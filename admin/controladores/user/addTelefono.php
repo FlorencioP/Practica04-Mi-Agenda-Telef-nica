@@ -14,12 +14,12 @@
         <?php
             //incluir conexión a la base de datos
             include '../../../config/conexionBD.php';
-            $codigo = $_GET["id"];
+            @$codigo = $_GET["id"];
             $telefono = isset($_POST["Telefono"]) ? trim($_POST["Telefono"]) : null;
             $tipo = isset($_POST["tipo"]) ? mb_strtoupper(trim($_POST["tipo"]), 'UTF-8') : null;
             $operadora = isset($_POST["operadora"]) ? mb_strtoupper(trim($_POST["operadora"]), 'UTF-8') : null; 
             $sql = "INSERT INTO telefonos VALUES (0, '$telefono', '$tipo', '$operadora', 'N', null, null,'$codigo')";
-            if ($conn->query($sql) === TRUE) {
+            if (@$conn->query($sql) === TRUE) {
                 echo "Se ha actualizado los datos personales correctamemte!!!<br>";
 //ideota
                 header("Location: ../../vista/usuario/index.php?id=$codigo");

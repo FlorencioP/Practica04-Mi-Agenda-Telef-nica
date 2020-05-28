@@ -21,13 +21,13 @@
             <tbody>
             <?php  // and tel_numero=$num
                 include '../../../config/conexionBD.php'; 
-                $id=$_GET['id'];
-                $num=$_GET['num'];
+                @$id=$_GET['id'];
+                @$num=$_GET['num'];
                 
                 $sql = "SELECT * FROM telefonos where USUARIOS_usu_id = $id and tel_numero = $num"; 
                 $result = $conn->query($sql); 
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
+                if (@$result->num_rows > 0) {
+                    while($row = @$result->fetch_assoc()) {
             ?>  
                 <tr>
                     <td class="tg-y698"><?php echo $row["tel_numero"] ?></td>
@@ -41,7 +41,7 @@
                
             }else{
                 if (!$result) {
-                    trigger_error('Invalid query: ' . $conn->error);
+                    trigger_error('Invalid query: ' . @$conn->error);
                 }
             }
             $conn->close(); 

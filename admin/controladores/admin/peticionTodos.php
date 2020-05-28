@@ -2,9 +2,9 @@
     //incluir conexión a la base de datos 
     include "../../../config/conexionBD.php"; 
     //echo "Hola " . $cedula; 
-    $id = $_GET['id'];
+    @$id = $_GET['id'];
     
-    $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' ORDER BY usu_nombres ASC "; 
+    @$sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' ORDER BY usu_nombres ASC "; 
     //cambiar la consulta para puede buscar por ocurrencias de letras 
     $result = $conn->query($sql); 
     
@@ -22,8 +22,8 @@
 
         </tr>"; 
         
-    if ($result->num_rows > 0) { 
-        while($row = $result->fetch_assoc()) { 
+    if (@$result->num_rows > 0) { 
+        while($row = @$result->fetch_assoc()) { 
             echo "<tr>"; 
             echo " <td class='tg-y698'>" . $row['usu_cedula'] . "</td>"; 
             echo " <td class='tg-y698'>" . $row['usu_nombres'] ."</td>"; 

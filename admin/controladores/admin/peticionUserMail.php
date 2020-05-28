@@ -1,12 +1,12 @@
 <?php 
     //incluir conexión a la base de datos 
     include "../../../config/conexionBD.php"; 
-    $mail = $_GET['mail']; 
+    @$mail = $_GET['mail']; 
     //echo "Hola " . $cedula; 
     
-    $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_correo='$mail' ORDER BY usu_nombres ASC"; 
+    @$sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_correo='$mail' ORDER BY usu_nombres ASC"; 
     //cambiar la consulta para puede buscar por ocurrencias de letras 
-    $result = $conn->query($sql); 
+    @$result = $conn->query($sql); 
     
     echo " <table class='tg' style='width:95%'> 
         <tr> 
@@ -36,7 +36,7 @@
             
 
 
-            echo " <td class='tg-y698'><a href='../../vista/admin/indexMod.php?id=" . $id . " &idmod=" . $row['usu_id'] ."'>Modificar</a></td>";
+            echo " <td class='tg-y698'><a href='../../vista/admin/indexMod.php?id=" . @$id . " &idmod=" . @$row['usu_id'] ."'>Modificar</a></td>";
             
             
             echo "</tr>"; 

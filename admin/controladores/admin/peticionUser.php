@@ -1,12 +1,12 @@
 <?php 
     //incluir conexión a la base de datos 
     include "../../../config/conexionBD.php"; 
-    $cedula = $_GET['cedula']; 
+    @$cedula = $_GET['cedula']; 
     //echo "Hola " . $cedula; 
     
-    $sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_cedula='$cedula' ORDER BY usu_nombres ASC"; 
+    @$sql = "SELECT * FROM usuarios WHERE usu_eliminado = 'N' and usu_cedula='$cedula' ORDER BY usu_nombres ASC"; 
     //cambiar la consulta para puede buscar por ocurrencias de letras 
-    $result = $conn->query($sql); 
+    @$result = $conn->query($sql); 
     
     echo " <table class='tg' style='width:95%'> 
         <tr> 
@@ -21,8 +21,8 @@
         <th class='tg-46ru'> Perfil </th> 
         </tr>"; 
         
-    if ($result->num_rows > 0) { 
-        while($row = $result->fetch_assoc()) { 
+    if (@$result->num_rows > 0) { 
+        while(@$row = $result->fetch_assoc()) { 
             echo "<tr>"; 
             echo " <td class='tg-y698'>" . $row['usu_cedula'] . "</td>"; 
             echo " <td class='tg-y698'>" . $row['usu_nombres'] ."</td>"; 
@@ -35,7 +35,7 @@
             echo "  <td class='tg-y698' ><button onclick='buscarPorid(" . $row['usu_id'] . ")'>Telefonos</button></td>";
 
 
-            echo " <td class='tg-y698'><a href='../../vista/admin/indexMod.php?id=" . $id . " &idmod=" . $row['usu_id'] ."'>Modificar</a></td>";
+            echo " <td class='tg-y698'><a href='../../vista/admin/indexMod.php?id=" . @$id . " &idmod=" . @$row['usu_id'] ."'>Modificar</a></td>";
 
 
             echo "</tr>"; 

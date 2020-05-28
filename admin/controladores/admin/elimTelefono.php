@@ -15,8 +15,8 @@
         <?php
             //incluir conexión a la base de datos
             include '../../../config/conexionBD.php';
-            $codigo = $_GET["idT"];
-            $id = $_GET["id"];
+            @$codigo = $_GET["idT"];
+            @$id = $_GET["id"];
             //Si voy a eliminar físicamente el registro de la tabla
             //$sql = "DELETE FROM usuario WHERE codigo = '$codigo'";
             date_default_timezone_set("America/Guayaquil");

@@ -13,6 +13,14 @@
 
     <p>Menu de Busqueda</p>
     
+    <div id="volver">
+        <a href="index.php"><img src="../imagenes/pngwing.com.png"></a> 
+    </div>
+
+
+
+
+
     <form id="formularioC">
 
         <label for="cedula">Cedula de la pesona</label> <br>

@@ -2,7 +2,7 @@
     //incluir conexión a la base de datos
    // echo "<p>Si llega pa aca</p>"; 
     include "../../config/conexionBD.php"; 
-    $cedula = $_GET['cedula']; 
+    @$cedula = $_GET['cedula']; 
     //echo "Hola " . $cedula; 
 
 
@@ -25,7 +25,7 @@
     } 
 
 
-    $sql = "SELECT * FROM telefonos WHERE tel_eliminado = 'N' and USUARIOS_usu_id= '$idcel' "; 
+    @$sql = "SELECT * FROM telefonos WHERE tel_eliminado = 'N' and USUARIOS_usu_id= '$idcel' "; 
     //cambiar la consulta para puede buscar por ocurrencias de letras 
     $result = $conn->query($sql); 
     echo " <table class='tg' style='width:95% '> 

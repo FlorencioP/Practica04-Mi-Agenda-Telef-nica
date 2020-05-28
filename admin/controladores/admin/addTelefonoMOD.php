@@ -14,8 +14,8 @@
         <?php
             //incluir conexión a la base de datos
             include '../../../config/conexionBD.php';
-            $codigo = $_GET["id"];
-            $idmod=$_GET['idmod'];
+            @$codigo = $_GET["id"];
+            @$idmod=$_GET['idmod'];
 
             $telefono = isset($_POST["Telefono"]) ? trim($_POST["Telefono"]) : null;
             $tipo = isset($_POST["tipo"]) ? mb_strtoupper(trim($_POST["tipo"]), 'UTF-8') : null;

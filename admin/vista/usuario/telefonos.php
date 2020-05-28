@@ -25,6 +25,10 @@
 
     <p>Menu de Busqueda</p>
     
+    <div id="volver">
+        <a href="../../../public/vista/paginashtml/index.php?id=<?php echo $id ?>"><img src="../../../public/vista/imagenes/pngwing.com.png"></a> 
+    </div>
+
     <form id="formularioC">
 
         <label for="cedula">Cedula de la pesona</label> <br>

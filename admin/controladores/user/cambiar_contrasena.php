@@ -15,15 +15,15 @@
     <?php
         //incluir conexión a la base de datos
         include '../../../config/conexionBD.php';
-        $codigo = $_GET["id"];
+        @$codigo = $_GET["id"];
         $contrasena1 = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
         $contrasena2 = isset($_POST["newContrasena"]) ? trim($_POST["newContrasena"]) : null;
         $sqlContrasena1 = "SELECT * FROM usuarios where usu_id=$codigo and
         usu_contrasena=MD5('$contrasena1')";
 
-        $result1 = $conn->query($sqlContrasena1);
+@$result1 = $conn->query($sqlContrasena1);
 
-        if ($result1->num_rows > 0) {
+        if (@$result1->num_rows > 0) {
             date_default_timezone_set("America/Guayaquil");
             $fecha = date('Y-m-d H:i:s', time());
             $sqlContrasena2 = "UPDATE usuarios " .

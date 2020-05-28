@@ -31,7 +31,7 @@ font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
     float: left;
     margin: 1%;
     font-size: 150%;
-    padding-left: 27%;
+    padding-left: 12%;
 }
 
 label{
@@ -83,4 +83,25 @@ b{
     padding: 3%;
     border-radius: 25px;
     font-size: 130%;
+}
+
+#volver{
+    float: left;
+    margin-left:5%;
+    width: 10%;
+
+}
+
+#volver img{
+    width: 100%;
+
+}
+
+#volver img:hover{
+    width: 120%;
+}
+
+#volver:hover{
+    margin-left:4%;
+    margin-right:1%;
 }

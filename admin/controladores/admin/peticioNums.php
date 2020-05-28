@@ -1,13 +1,13 @@
 <?php 
 
     include "../../../config/conexionBD.php"; 
-    $idcel = $_GET['id']; 
+    @$idcel = $_GET['id']; 
 
 
-    $sql = "SELECT * FROM telefonos WHERE tel_eliminado = 'N' and USUARIOS_usu_id= '$idcel' "; 
+    @$sql = "SELECT * FROM telefonos WHERE tel_eliminado = 'N' and USUARIOS_usu_id= '$idcel' "; 
 
 
-    $result = $conn->query($sql); 
+    @$result = $conn->query($sql); 
     echo " <table class='tg' style='width:95%'> 
     <tr> <th class='tg-46ru'>Numero</th> 
         <th class='tg-46ru'>Tipo</th> 
