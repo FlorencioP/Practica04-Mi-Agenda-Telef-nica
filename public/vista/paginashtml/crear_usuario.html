@@ -7,6 +7,9 @@
     <script type="text/javascript" src="../../controladores/validaciones.js"></script>
 </head>
     <body>
+        <div id="atras">
+            <a href="../../vista/paginashtml/index.php"><img src="../../vista/imagenes/kirby_atras.png" id="ima"></a>
+        </div>
         <div id="centro4">
         <form id="formulario01" method="POST" action="../../controladores/crear_usuario.php" onsubmit="return validarForm()">
         <div id="texto">
@@ -85,7 +88,7 @@
                     <input class="btnLog" type="submit" value="Registrarse" name="crear" onclick="validarPassword();
                         validarCorreo();validarFecha();validarTlf();validarDireccion();validarApellidos();
                         validarNombres();validarTamano();validarTipo();validarOperadora()">
-                    <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
+                    
                 </div>
             </div>
             <br>

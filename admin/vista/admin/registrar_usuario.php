@@ -19,7 +19,10 @@
     <script type="text/javascript" src="../../../admin/controladores/admin/validaciones_adm.js"></script>
 </head>
     <body>
-        <div id="centro">
+        <div id="atras">
+            <a href="telefonos.php?id=<?php echo $id ?>"><img src="../../../public/vista/imagenes/kirby_atras.png" id="ima"></a>
+        </div>
+        <div id="centro4">
         <form id="formulario01" method="POST" action="../../controladores/admin/crear_usuario.php?id=<?php echo $id ?>" onsubmit="return validarForm()">
         <div id="texto">
                 <div class="inputP">
@@ -97,7 +100,6 @@
                     <input class="btnLog" type="submit" value="Registrarse" name="crear" onclick="validarPassword();
                         validarCorreo();validarFecha();validarTlf();validarDireccion();validarApellidos();
                         validarNombres();validarTamano();validarTipo();validarOperadora()">
-                    <input type="reset" id="cancelar" name="cancelar" value="Cancelar"/>
                 </div>
             </div>
             <br>
