@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Registro</title>
     <link   rel="stylesheet" type="text/css" href="../css/user.css"/>
     <link   rel="stylesheet" type="text/css" href="../css/estilosUser.css"/>
-    <script type="text/javascript" src="../../controladores/validaciones.js"></script>
+    <script src="../../controladores/validaciones.js"></script>
+    <link rel="stylesheet" href="../datePolyFill/html5-simple-date-input-polyfill.css" />
+    <script src="../datePolyFill/html5-simple-date-input-polyfill.min.js"></script>
+    
 </head>
     <body>
         <div id="centro">
         <form id="formulario01" method="POST" action="../../controladores/crear_usuario.php" onsubmit="return validarForm()">
-        <div id="texto">
+        <div id="texto1">
                 <div class="inputP">
                     <label id="text">Cedula:</label>
                     <br>
@@ -19,64 +23,63 @@
                 </div>
                 
                 <div class="inputP">
-                    <label id="text">Nombres:</label>
+                    <label id="text2">Nombres:</label>
                     <input type="text" id="Nombre" size="30" name="nombres" onblur="validarNombres()" onkeyup="valLeNom()">
                     <br>
                     <span id="msjNombres" class="error"></span>
                 </div>
             
                 <div class="inputP">
-                    <label id="text">Apellido:</label>
+                    <label id="text3">Apellido:</label>
                     <input type="text" id="Apellido" size="30" name="apellidos" onblur="validarApellidos()" onkeyup="valApeLe()">
                     <br>
                     <span id="msjApellido" class="error"></span>
                 </div>
                 
                 <div class="inputP">
-                    <label id="text">Direccion:</label>
+                    <label id="tex4t">Direccion:</label>
                     <input type="text" id="Direccion" name="direccion" size="30" onblur="validarDireccion()">
                     <br>
                     <span id="msjDireccion" class="error"></span>
                 </div>
                 
                 <div class="inputP">
-                    <label id="text">Telefono:</label>
+                    <label id="text5">Telefono:</label>
                     <input type="text" id="Telefono" name="telefono" size="30" onkeyup="validarTlf()" onblur="validarLongTel()">
                     <br>
                     <span id="msjTelefono" class="error"></span>
                 </div>
 
                 <div class="inputP">
-                    <label id="text">Tipo:</label>
+                    <label id="text6">Tipo:</label>
                     <input type="text" id="tipo" name="tipo" size="30" onkeyup="validarTipo()" onblur="validarLongTel()">
                     <br>
                     <span id="msjTipo" class="error"></span>
                 </div>
 
                 <div class="inputP">
-                    <label id="text">Operadora:</label>
+                    <label id="text7">Operadora:</label>
                     <input type="text" id="operadora" name="operadora" size="30" onkeyup="validarOperadora()" onblur="validarLongTel()">
                     <br>
                     <span id="msjOperadora" class="error"></span>
                 </div>
                 
                 <div class="inputP">
-                    <label id="text">Fecha de nacimiento:</label>
-                    <input type="date" id="Fecha" name="fechaNacimiento" value=""  onkeyup="validarFecha()" placeholder="Ingrese su
-                    fecha de nacimiento ..." required/>
+                    <label id="text9">Fecha de nacimiento:</label>
+                    <input type="date" id="Fecha" name="fechaNacimiento" value=""  onkeyup="validarFecha()"  required/>
                     <br>
                     <span id="msjFecha" class="error"></span>
                 </div>
                 
                 <div class="inputP">
-                    <label id="text">Correo:</label>
+                    <label id="text8">Correo:</label>
                     <input type="text" id="Correo" size="30" name="correo" onblur="validarCorreo()">
                     <br>
                     <span id="msjCorreo" class="error"></span>
                 </div>
             
                 <div class="inputP">
-                    <label id="text">Password:</label>
+                    <label id="text11">Password:</label>
                     <input type="password" id="password" name="contrasena" size="30" onblur="validarPassword()">
                     <br>
                     <span id="msjPassword" class="error"></span>
