@@ -47,6 +47,16 @@ span{
     border-radius: 10%;
 }
 
+#centro4{
+    float: left;
+    width: 500px;
+    height: max-content;
+    margin-top: 1%;
+    margin-left: 30%;
+    margin-bottom: 1%;
+    border-radius: 10%;
+}
+
 div#texto{
     float: left;
     margin-left: 25%;
