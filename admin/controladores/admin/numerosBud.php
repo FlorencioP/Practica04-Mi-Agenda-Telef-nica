@@ -43,8 +43,6 @@
                 if (!$result) {
                     trigger_error('Invalid query: ' . @$conn->error);
                 }
-            }
-            $conn->close(); 
-            ?> 
+            }$conn->close(); ?> 
             </tbody>
         </table>
